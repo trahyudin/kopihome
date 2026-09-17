@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Local databases & logs
+data/*.sqlite
+*.sqlite
+*.log
+
+# Temporary / intermediate files
+css/original_style.css
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard — KopiWeb</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e0a058' d='M4 10h12v5a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6v-5z'/%3E%3Cpath fill='%23e0a058' d='M16 11h2a3 3 0 0 1 0 6h-2v-6z'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- AUTH VIEW (LOGIN SCREEN) -->
+  <div id="authView" class="auth-container">
+    <div class="auth-card">
+      <div class="auth-brand">
+        <svg viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="23" fill="var(--bg3)" stroke="var(--border)" stroke-width="1.8"/>
+          <path d="M12 21.5h17v5l-1.8 6.5q-1 5-5.8 5h-2.8q-4.8 0-5.8-5l-1.8-6.5v-5z" fill="var(--accent)"/>
+          <path d="M29.5 22.5h2q3.2 0 3.2 4.2t-3.2 4.2h-2.8" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span>KopiWeb Admin</span>
+      </div>
+      <h1 class="auth-title">Masuk ke Dashboard</h1>
+      <p class="auth-sub">Kelola prospek konsultasi, template katalog, dan pengaturan situs.</p>
+
+      <div id="loginError" style="display:none;background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#ef4444;padding:10px 14px;border-radius:10px;font-size:13px;margin-bottom:18px"></div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="form-label" for="loginUser">Username</label>
+          <input type="text" id="loginUser" name="username" class="form-control" required placeholder="admin" autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="loginPass">Password</label>
+          <input type="password" id="loginPass" name="password" class="form-control" required placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:10px">
+          Masuk Dashboard
+        </button>
+      </form>
+      <div style="margin-top:24px;text-align:center">
+        <a href="../index.html" style="font-size:13px;color:var(--muted)">← Kembali ke Website Utama</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- APP VIEW (AUTHENTICATED DASHBOARD) -->
+  <div id="appView" style="display:none">
+    <header class="admin-header">
+      <div class="admin-brand">
+        <svg viewBox="0 0 48 48" style="width:34px;height:34px">
+          <circle cx="24" cy="24" r="23" fill="var(--bg3)" stroke="var(--border)" stroke-width="1.8"/>
+          <path d="M12 21.5h17v5l-1.8 6.5q-1 5-5.8 5h-2.8q-4.8 0-5.8-5l-1.8-6.5v-5z" fill="var(--accent)"/>
+        </svg>
+        <span>KopiWeb Dashboard</span>
+      </div>
+
+      <nav class="admin-nav">
+        <button class="nav-tab active" data-target="tabLeads">📊 Data Leads &amp; Konsultasi</button>
+        <button class="nav-tab" data-target="tabTemplates">☕ Katalog Template</button>
+        <button class="nav-tab" data-target="tabSettings">⚙️ Pengaturan Website</button>
+      </nav>
+
+      <div class="admin-user">
+        <span style="font-size:13px;color:var(--muted)">Halo, <strong id="loggedUser" style="color:var(--ink)">Admin</strong></span>
+        <a href="../index.html" target="_blank" class="btn btn-ghost btn-sm">🌐 Lihat Web</a>
+        <button id="logoutBtn" class="btn btn-danger btn-sm">Keluar</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <!-- Top Metrics -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-label">Total Leads Konsultasi</span>
+          <div id="statTotalLeads" class="stat-value">0</div>
+          <span class="stat-desc">Prospek coffee shop masuk</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Leads Baru (Belum Dihubungi)</span>
+          <div id="statNewLeads" class="stat-value" style="color:#60a5fa">0</div>
+          <span class="stat-desc">Perlu segera di-follow up</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Leads Deal / Order</span>
+          <div id="statDealLeads" class="stat-value" style="color:#34d399">0</div>
+          <span class="stat-desc">Closing project pembuatan web</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Total Template Aktif</span>
+          <div id="statTotalTemplates" class="stat-value">45</div>
+          <span class="stat-desc">Koleksi showcase portofolio</span>
+        </div>
+      </section>
+
+      <!-- TAB 1: LEADS & INQUIRIES -->
+      <section id="tabLeads" class="tab-content">
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Daftar Prospek Masuk (Leads Konsultasi)</h2>
+              <p style="color:var(--muted);font-size:13px;margin-top:4px">Klien yang mengisi form konsultasi dari landing page.</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px">
+              <label style="font-size:13px;color:var(--muted)" for="filterInquiryStatus">Status:</label>
+              <select id="filterInquiryStatus" class="form-control" style="width:auto;padding:6px 12px;font-size:13px">
+                <option value="">Semua Status</option>
+                <option value="baru">Baru</option>
+                <option value="dihubungi">Dihubungi</option>
+                <option value="deal">Deal / Order</option>
+                <option value="batal">Batal</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Nama &amp; Coffee Shop</th>
+                  <th>WhatsApp</th>
+                  <th>Paket Pilihan</th>
+                  <th>Template Minat</th>
+                  <th>Waktu Masuk</th>
+                  <th>Status Lead</th>
+                  <th style="text-align:right">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="inquiriesTableBody">
+                <tr><td colspan="7" style="text-align:center;padding:32px;color:var(--muted)">Memuat data...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: TEMPLATES -->
+      <section id="tabTemplates" class="tab-content" style="display:none">
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Manajemen Katalog Template Coffee Shop</h2>
+              <p style="color:var(--muted);font-size:13px;margin-top:4px">Kelola 45 template yang tampil di seksi showcase.</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px">
+              <input type="text" id="adminTplSearch" class="form-control" placeholder="Cari nama template..." style="width:240px;padding:8px 14px;font-size:13px">
+              <button class="btn btn-primary btn-sm" onclick="openAddTemplateModal()">+ Tambah Template</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Preview</th>
+                  <th>Nama Template</th>
+                  <th>Kategori / Tags</th>
+                  <th>Demo URL</th>
+                  <th>Sneak Peeks</th>
+                  <th style="text-align:right">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="templatesTableBody">
+                <tr><td colspan="7" style="text-align:center;padding:32px;color:var(--muted)">Memuat data...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: SETTINGS -->
+      <section id="tabSettings" class="tab-content" style="display:none">
+        <div class="panel" style="max-width:720px">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Pengaturan Website &amp; Kontak Bisnis</h2>
+              <p style="color:var(--muted);font-size:13px;margin-top:4px">Ubah nomor WhatsApp, pesan pembuka, dan data kontak.</p>
+            </div>
+          </div>
+          <div style="padding:28px">
+            <form id="settingsForm">
+              <div class="form-group">
+                <label class="form-label" for="setWaNumber">Nomor WhatsApp Bisnis (Format Internasional)</label>
+                <input type="text" id="setWaNumber" class="form-control" required placeholder="6281234567890">
+                <small style="color:var(--muted);font-size:12px;margin-top:4px;display:block">Awali dengan 62 tanpa spasi atau simbol plus (misal: 6281234567890).</small>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="setWaMsgId">Pesan Pembuka WhatsApp (Bahasa Indonesia)</label>
+                <textarea id="setWaMsgId" class="form-control" rows="3"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="setWaMsgEn">Pesan Pembuka WhatsApp (English)</label>
+                <textarea id="setWaMsgEn" class="form-control" rows="3"></textarea>
+              </div>
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                <div class="form-group">
+                  <label class="form-label" for="setContactEmail">Email Kontak</label>
+                  <input type="email" id="setContactEmail" class="form-control" placeholder="hello@optibis.id">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="setContactInstagram">Username Instagram</label>
+                  <input type="text" id="setContactInstagram" class="form-control" placeholder="optibis.id">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="setSiteTitle">Judul Website (SEO Title)</label>
+                <input type="text" id="setSiteTitle" class="form-control">
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top:10px">
+                Simpan Perubahan
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ADD / EDIT TEMPLATE MODAL -->
+  <div id="templateModal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="tplModalTitle" style="font-size:18px">Edit Template</h3>
+        <button onclick="closeTemplateModal()" style="font-size:20px;color:var(--muted)">&times;</button>
+      </div>
+      <form id="templateForm">
+        <input type="hidden" id="tplFormId">
+        <div class="form-group">
+          <label class="form-label">Nama Template (ID) *</label>
+          <input type="text" id="tplNameId" class="form-control" required placeholder="Kape RPG">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Nama Template (EN)</label>
+          <input type="text" id="tplNameEn" class="form-control" placeholder="Kape RPG">
+        </div>
+        <div class="form-group">
+          <label class="form-label">URL Demo Website</label>
+          <input type="url" id="tplUrl" class="form-control" placeholder="https://perchance.org/kape-rpg#/">
+        </div>
+        <div class="form-group">
+          <label class="form-label">URL Gambar Screenshot (Opsional)</label>
+          <input type="url" id="tplShot" class="form-control" placeholder="https://user.uploads.dev/file/...jpg">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Kategori / Tags (Pisahkan koma)</label>
+          <input type="text" id="tplTags" class="form-control" placeholder="RPG, Game, Kreatif">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Deskripsi (ID)</label>
+          <textarea id="tplDescId" class="form-control" rows="2" placeholder="Website kopi bergaya RPG/interaktif."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Deskripsi (EN)</label>
+          <textarea id="tplDescEn" class="form-control" rows="2" placeholder="RPG-style interactive coffee website."></textarea>
+        </div>
+        <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:20px">
+          <button type="button" class="btn btn-ghost" onclick="closeTemplateModal()">Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan Template</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

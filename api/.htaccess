@@ -1,0 +1,17 @@
+# ==============================================================================
+# KOPIWEB - API Security & Header Rules
+# ==============================================================================
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, PATCH, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
+</IfModule>
+
+# Cegah akses ke file konfigurasi atau database langsung
+<FilesMatch "(config\.php|database\.sqlite|\.sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+Options -Indexes

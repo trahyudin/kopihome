@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="espresso">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KopiWeb — Jasa Pembuatan Website untuk Coffee Shop</title>
+  <meta name="description" content="Jasa pembuatan website profesional untuk coffee shop: landing page, company profile, hingga sistem pertumbuhan. Termasuk hosting, domain, dan perawatan. Konsultasi gratis.">
+  <meta name="keywords" content="website coffee shop, jasa website kopi, cafe landing page, coffee shop company profile, website kafe, optibis">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e0a058' d='M4 10h12v5a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6v-5z'/%3E%3Cpath fill='%23e0a058' d='M16 11h2a3 3 0 0 1 0 6h-2v-6z'/%3E%3Cpath fill='%23e0a058' d='M12 2c-1.3 1.7.3 2.4.3 3.8' stroke='%23e0a058' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Early Theme & Language Init Script to Prevent Flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('kw-theme') || 'espresso';
+      var l = localStorage.getItem('kw-lang') || 'id';
+      document.documentElement.dataset.theme = t;
+      document.documentElement.dataset.lang = l;
+      document.documentElement.lang = l;
+    })();
+  </script>
+</head>
+<body>
+
+<svg aria-hidden="true" style="position:absolute;width:0;height:0">
+  <symbol id="ic-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="ic-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="ic-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="8" r="1.2" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="ic-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+  <symbol id="ic-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="ic-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="ic-tag" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7" cy="7" r="1.5" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="ic-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.35-4.35" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="ic-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" stroke="none"/><path d="m21 15-5-5L5 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.64-6.36M21 3v6h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-trend" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 7h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-9 16-11-2 13-7 16-9 18z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 20c2-6 6-9 11-11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="ic-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9 9 0 0 1 13 0M8.5 16a4.5 4.5 0 0 1 7 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="19" r="1.4" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="ic-cup" viewBox="0 0 24 24"><path d="M4 10h13v5a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6v-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M17 11h2a3 3 0 0 1 0 6h-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 3.5c0 1-1 1-1 2M12.5 3.5c0 1-1 1-1 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="23" fill="var(--bg3)" stroke="var(--plate-ring)" stroke-width="1.8"/>
+        <g fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round">
+          <path d="M15.5 16.5q5 -8 10 0"/>
+          <path d="M17.5 11q3 -4.5 6 0"/>
+          <path d="M19.5 7.2q1 -1.6 2 0"/>
+        </g>
+        <circle cx="20.5" cy="3.2" r="1.3" fill="var(--accent)"/>
+        <path d="M29.5 22.5h2q3.2 0 3.2 4.2t-3.2 4.2h-2.8" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M12 21.5h17v5l-1.8 6.5q-1 5-5.8 5h-2.8q-4.8 0-5.8-5l-1.8-6.5v-5z" fill="var(--ink)"/>
+      </svg>
+      <span>KopiWeb</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#why" data-en="Why">Kenapa</a>
+      <a href="#solusi" data-en="Solutions">Solusi</a>
+      <a href="#proses" data-en="Workflow">Proses</a>
+      <a href="#template" data-en="Templates">Template</a>
+      <a href="#harga" data-en="Pricing">Harga</a>
+      <a href="#faq" data-en="FAQ">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
+        <svg class="ic" id="themeIcon"><use href="#ic-moon"/></svg>
+      </button>
+      <div class="lang-pill">
+        <button id="langId" class="on">ID</button>
+        <button id="langEn">EN</button>
+      </div>
+      <a class="btn btn-primary btn-sm nav-cta" data-wa href="#kontak" data-en="Free Consultation">Konsultasi Gratis</a>
+      <button class="icon-btn burger" id="burgerBtn" aria-label="Menu">
+        <svg class="ic"><use href="#ic-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#why" data-en="Why">Kenapa</a>
+    <a href="#solusi" data-en="Solutions">Solusi</a>
+    <a href="#proses" data-en="Workflow">Proses</a>
+    <a href="#template" data-en="Templates">Template</a>
+    <a href="#harga" data-en="Pricing">Harga</a>
+    <a href="#faq" data-en="FAQ">FAQ</a>
+    <a class="btn btn-primary" data-wa href="#kontak" data-en="Free Consultation">Konsultasi Gratis</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <span class="hero-badge"><svg class="ic"><use href="#ic-cup"/></svg><span data-en="Coffee Shop Website Specialist">Spesialis Website Coffee Shop</span></span>
+      <h1 data-en="Digital Presence for Your Coffee Shop">Digital Presence untuk Coffee Shop Anda</h1>
+      <p class="hero-sub" data-en="We help coffee shops build a professional online presence — strengthening your brand, showcasing your menu, and bringing in new customers. From landing pages to growth systems, hosting &amp; domain included.">Kami membantu coffee shop tampil profesional secara online — memperkuat brand, menampilkan menu, dan mendatangkan pelanggan baru. Dari landing page hingga sistem pertumbuhan, semua sudah termasuk hosting &amp; domain.</p>
+      <div class="hero-btns">
+        <a class="btn btn-primary btn-lg" data-wa href="#kontak"><svg class="ic"><use href="#ic-wa"/></svg><span data-en="Free Consultation">Konsultasi Gratis</span></a>
+        <a class="btn btn-ghost btn-lg" href="#harga"><span data-en="See Packages &amp; Pricing">Lihat Paket &amp; Harga</span></a>
+      </div>
+      <ul class="trust">
+        <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Free consultation, no commitment">Konsultasi gratis tanpa komitmen</span></li>
+        <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Hosting &amp; domain included">Hosting &amp; domain termasuk</span></li>
+        <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Design revised until you're happy">Desain revisi sampai puas</span></li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 460 400" fill="none">
+        <defs>
+          <radialGradient id="hg" cx="50%" cy="42%" r="55%">
+            <stop offset="0%" stop-color="var(--accent)" stop-opacity=".26"/>
+            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="cupG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--accent)"/>
+            <stop offset="100%" stop-color="var(--accent-strong)"/>
+          </linearGradient>
+        </defs>
+        <circle id="haGlow" cx="230" cy="205" r="185" fill="url(#hg)"/>
+        <path class="ha-steam" d="M152 96c-14-18 14-30 0-52M232 88c-14-18 14-30 0-52M312 96c-14-18 14-30 0-52" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" opacity=".75"/>
+        <ellipse id="haShadow" cx="230" cy="322" rx="172" ry="30" fill="var(--card)" stroke="var(--border)" stroke-width="2"/>
+        <ellipse id="haPlate" cx="230" cy="313" rx="150" ry="23" fill="var(--bg3)"/>
+        <path id="haCup" d="M112 168h236v16q0 14-12 16l-22 68q-6 20-32 20H178q-26 0-32-20l-22-68q-12-2-12-16z" fill="url(#cupG)"/>
+        <ellipse id="haRim" cx="230" cy="170" rx="120" ry="22" fill="var(--card)" stroke="var(--border)" stroke-width="2"/>
+        <ellipse id="haCoffee" cx="230" cy="172" rx="98" ry="16" fill="#7a4a22" opacity=".28"/>
+        <path id="haFoam1" d="M230 173c-20-4-34 6-18 12s40-6 28-16c-8-6-18 0-10 4z" fill="#f0dcb8" opacity=".9"/>
+        <path id="haFoam2" d="M230 173c-12 2-16-4-8-8s16 2 10 7" stroke="var(--accent)" stroke-width="3" opacity=".95"/>
+        <path id="haHandle" d="M348 198h30c30 0 30 50-6 54h-28" stroke="var(--accent)" stroke-width="16" stroke-linecap="round"/>
+        <g>
+          <g class="ha-bean"><g transform="rotate(-28 92 242)"><ellipse cx="92" cy="242" rx="20" ry="13" fill="var(--accent)"/><path d="M92 230q4 12 0 24" stroke="var(--bg)" stroke-width="3" fill="none"/></g></g>
+          <g class="ha-bean"><g transform="rotate(24 384 118)"><ellipse cx="384" cy="118" rx="16" ry="10" fill="var(--accent)"/><path d="M384 109q3 10 0 19" stroke="var(--bg)" stroke-width="2.5" fill="none"/></g></g>
+          <g class="ha-bean"><g transform="rotate(18 86 126)"><ellipse cx="86" cy="126" rx="12" ry="8" fill="var(--accent)"/></g></g>
+          <g class="ha-bean"><g transform="rotate(-20 392 268)"><ellipse cx="392" cy="268" rx="14" ry="9" fill="var(--accent)"/></g></g>
+          <ellipse cx="146" cy="306" rx="9" ry="6" fill="var(--accent)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag"><svg class="ic"><use href="#ic-cup"/></svg><span data-en="Why a Website?">Kenapa Website?</span></span>
+      <h2 class="sec-title" data-en="Why Does Your Coffee Shop Need a Website?">Kenapa Coffee Shop Anda Butuh Website?</h2>
+      <p class="sec-sub" data-en="Your customers search Google before deciding where to get coffee. If they can't find you, they choose someone else.">Pelanggan Anda mencari di Google sebelum memutuskan ke mana harus ngopi. Jika tidak ditemukan, mereka memilih tempat lain.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-search"/></svg>
+        <h3 data-en="They Check Online First">Cek Online Lebih Dulu</h3>
+        <p data-en="78% of customers search for location, menu, and reviews online before visiting a coffee shop.">78% pelanggan mencari lokasi, menu, dan ulasan secara online sebelum mengunjungi coffee shop.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-clock"/></svg>
+        <h3 data-en="Open Hours &amp; Location, Always Available">Jam Buka &amp; Lokasi Selalu Tersedia</h3>
+        <p data-en="Address, opening hours, and maps are visible 24/7 — no need to answer chats one by one.">Alamat, jam buka, dan peta tampil 24/7 — tanpa perlu menjawab chat satu per satu.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-image"/></svg>
+        <h3 data-en="Your Menu Is Always Visible">Menu Selalu Terlihat</h3>
+        <p data-en="Menu, prices, and photos of your drinks look great anytime — and can be updated whenever.">Menu, harga, dan foto sajian tampil menarik kapan saja, dan bisa di-update kapan pun.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-shield"/></svg>
+        <h3 data-en="A More Trusted Brand">Brand Lebih Dipercaya</h3>
+        <p data-en="A polished website builds credibility with customers, partners, and potential investors.">Website yang rapi membangun kredibilitas di mata pelanggan, mitra, dan calon investor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUSI ============ -->
+<section class="solusi" id="solusi">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag"><svg class="ic"><use href="#ic-bolt"/></svg><span data-en="What We Offer">Yang Kami Tawarkan</span></span>
+      <h2 class="sec-title" data-en="Solutions for Every Stage of Your Coffee Business">Solusi untuk Setiap Tahap Bisnis Kopi Anda</h2>
+      <p class="sec-sub" data-en="Start with the first step, grow as your business needs evolve.">Mulai dari langkah pertama, berkembang sesuai kebutuhan bisnis Anda.</p>
+    </div>
+    <div class="ladder">
+      <div class="card ladder-step reveal">
+        <span class="ladder-n">01</span>
+        <h3 data-en="Visibility Landing Page">Visibility Landing Page</h3>
+        <p class="ladder-role" data-en="Promotion &amp; campaign">Promosi &amp; campaign</p>
+        <p class="ladder-desc" data-en="A single focused page for campaigns, events, product launches, or flash promos.">Satu halaman fokus untuk campaign, event, peluncuran produk, atau promo kilat.</p>
+        <span class="ladder-price">Mulai Rp 3,5jt</span>
+      </div>
+      <div class="ladder-arrow reveal"><svg class="ic"><use href="#ic-arrow"/></svg></div>
+      <div class="card ladder-step reveal">
+        <span class="ladder-n">02</span>
+        <h3 data-en="Business Company Website">Business Company Website</h3>
+        <p class="ladder-role" data-en="Company profile online">Company profile online</p>
+        <p class="ladder-desc" data-en="Complete profile, gallery, testimonials, and business info to build trust.">Profil lengkap, galeri, testimoni, dan info bisnis untuk membangun kepercayaan.</p>
+        <span class="ladder-price">Mulai Rp 7,5jt</span>
+      </div>
+      <div class="ladder-arrow reveal"><svg class="ic"><use href="#ic-arrow"/></svg></div>
+      <div class="card ladder-step reveal">
+        <span class="ladder-n">03</span>
+        <h3 data-en="Website Growth System">Website Growth System</h3>
+        <p class="ladder-role" data-en="For businesses that need systems">Bisnis yang butuh sistem</p>
+        <p class="ladder-desc" data-en="A complete system: admin dashboard, light CRM, lead management, and booking system.">Sistem lengkap: dashboard admin, CRM ringan, lead management, dan booking system.</p>
+        <span class="ladder-price">Mulai Rp 15jt</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FITUR ============ -->
+<section class="fitur" id="fitur">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag"><svg class="ic"><use href="#ic-wifi"/></svg><span data-en="What's On Your Website">Yang Ditampilkan di Website Anda</span></span>
+      <h2 class="sec-title" data-en="Everything Your Coffee Shop Needs">Semua yang Dibutuhkan Coffee Shop Anda</h2>
+      <p class="sec-sub" data-en="Every website we build is designed for coffee business needs — looking great and easy for customers to reach you.">Setiap website kami dirancang khusus untuk kebutuhan bisnis kopi — tampil menarik dan mudah dihubungi pelanggan.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-cup"/></svg>
+        <h3 data-en="Digital Menu &amp; Prices">Menu Digital &amp; Harga</h3>
+        <p data-en="Menu, prices, and photos of your drinks and food, neatly organized by category.">Menu, harga, dan foto sajian tersusun rapi per kategori.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-image"/></svg>
+        <h3 data-en="Drink &amp; Food Gallery">Galeri Foto Sajian</h3>
+        <p data-en="Showcase your signature drinks and cozy space to tempt visitors.">Pamerkan sajian andalan dan suasana nyaman untuk menggoda pengunjung.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-pin"/></svg>
+        <h3 data-en="Location &amp; Google Maps">Lokasi &amp; Google Maps</h3>
+        <p data-en="Peta interaktif memudahkan pelanggan menemukan dan datang ke coffee shop Anda.">Interactive maps make it easy for customers to find and visit your coffee shop.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-clock"/></svg>
+        <h3 data-en="Opening Hours">Jam Operasional</h3>
+        <p data-en="Jam buka selalu tampil jelas — pelanggan tidak perlu tanya-tanya.">Opening hours are always clear — customers don't have to ask.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-chat"/></svg>
+        <h3 data-en="WhatsApp Button">Tombol WhatsApp</h3>
+        <p data-en="Satu klik langsung chat — order, reservasi, atau sekadar tanya.">One click to chat — orders, reservations, or just a question.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-star"/></svg>
+        <h3 data-en="Customer Reviews">Testimoni Pelanggan</h3>
+        <p data-en="Ulasan pelanggan tampil mencolok untuk memperkuat kepercayaan.">Customer reviews displayed prominently to build trust.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-tag"/></svg>
+        <h3 data-en="Promos &amp; Events">Promo &amp; Event</h3>
+        <p data-en="Banner promo, menu musiman, dan event coffee shop Anda mudah disorot.">Promo banners, seasonal menus, and your coffee shop events get highlighted easily.</p>
+      </div>
+      <div class="card reveal">
+        <svg class="ic"><use href="#ic-search"/></svg>
+        <h3 data-en="Local SEO">SEO Lokal</h3>
+        <p data-en="Dioptimasi agar muncul saat pelanggan mencari coffee shop di area Anda.">Optimized to appear when customers search for a coffee shop in your area.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAMPAK ============ -->
+<section class="dampak" id="dampak">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag"><svg class="ic"><use href="#ic-trend"/></svg><span data-en="Impact">Dampak</span></span>
+      <h2 class="sec-title" data-en="The Impact You'll Feel">Dampak yang Anda Rasakan</h2>
+      <p class="sec-sub" data-en="Not just being online — this website works for your business every single day.">Bukan sekadar tampil online — website ini bekerja untuk bisnis Anda setiap hari.</p>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-item reveal">
+        <span class="impact-num">01</span>
+        <h3 data-en="Easier to Find">Lebih Mudah Ditemukan</h3>
+        <p data-en="Appear when customers search for a coffee shop around your location.">Muncul saat pelanggan mencari coffee shop di sekitar lokasi Anda.</p>
+      </div>
+      <div class="impact-item reveal">
+        <span class="impact-num">02</span>
+        <h3 data-en="A More Professional Brand">Brand Lebih Profesional</h3>
+        <p data-en="A professional impression at every online visit.">Kesan profesional di setiap kunjungan online mereka.</p>
+      </div>
+      <div class="impact-item reveal">
+        <span class="impact-num">03</span>
+        <h3 data-en="More Orders &amp; Bookings">Order &amp; Booking Meningkat</h3>
+        <p data-en="WhatsApp button and digital menu make it easy for customers to order.">Tombol WhatsApp dan menu digital mempermudah pelanggan memesan.</p>
+      </div>
+      <div class="impact-item reveal">
+        <span class="impact-num">04</span>
+        <h3 data-en="Effortless Updates">Update Tanpa Ribet</h3>
+        <p data-en="Menu, promos, and opening hours change anytime — without extra fuss.">Menu, promo, dan jam buka bisa diubah kapan pun — tanpa ribet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROSES ============ -->
+<section class="proses" id="proses">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag"><svg class="ic"><use href="#ic-cup"/></svg><span data-en="Workflow">Alur Kerja</span></span>
+      <h2 class="sec-title" data-en="How We Brew Your Website">Cara Kami Menyajikan Website Anda</h2>
+      <p class="sec-sub" data-en="Like brewing a good cup of coffee, every step is done with care — from consultation to going live.">Seperti menyeduh kopi yang baik, setiap langkah kami kerjakan dengan teliti — dari konsultasi hingga website live.</p>
+    </div>
+    <div class="proses-grid">
+      <div class="card proses-step reveal">
+        <div class="proses-badge"><svg class="ic"><use href="#ic-bolt"/></svg><span class="num">01</span></div>
+        <h3 data-en="Roast">Sangrai</h3>
+        <p class="role" data-en="Consultation &amp; research">Konsultasi &amp; riset</p>
+        <p data-en="We talk about your business, target customers, and needs — then find the best blend for you.">Kami ngobrol dulu soal bisnis, target pelanggan, dan kebutuhan Anda — lalu menentukan racikan yang paling pas.</p>
+      </div>
+      <div class="proses-arrow reveal"><svg class="ic"><use href="#ic-arrow"/></svg></div>
+      <div class="card proses-step reveal">
+        <div class="proses-badge"><svg class="ic"><use href="#ic-leaf"/></svg><span class="num">02</span></div>
+        <h3 data-en="Blend">Racik</h3>
+        <p class="role" data-en="Design &amp; build">Desain &amp; pembangunan</p>
+        <p data-en="Digital menu, gallery, WhatsApp button, SEO — all blended together with your brand identity.">Menu digital, galeri, tombol WhatsApp, SEO — semua diracik menyatu dengan identitas brand Anda.</p>
+      </div>
+      <div class="proses-arrow reveal"><svg class="ic"><use href="#ic-arrow"/></svg></div>
+      <div class="card proses-step reveal">
+        <div class="proses-badge"><svg class="ic"><use href="#ic-clock"/></svg><span class="num">03</span></div>
+        <h3 data-en="Brew">Seduh</h3>
+        <p class="role" data-en="Preview &amp; revision">Preview &amp; revisi</p>
+        <p data-en="You get a first taste. We re-brew until it tastes right before serving it publicly.">Hasilnya Anda cicipi dulu. Kami seduh ulang sampai rasanya pas sebelum disajikan ke publik.</p>
+      </div>
+      <div class="proses-arrow reveal"><svg class="ic"><use href="#ic-arrow"/></svg></div>
+      <div class="card proses-step reveal">
+        <div class="proses-badge"><svg class="ic"><use href="#ic-trend"/></svg><span class="num">04</span></div>
+        <h3 data-en="Serve">Sajikan</h3>
+        <p class="role" data-en="Launch &amp; maintenance">Launch &amp; maintenance</p>
+        <p data-en="Website goes live with active hosting &amp; domain — and we stay by your side to keep it warm.">Website live dengan hosting &amp; domain aktif — dan kami tetap di sisi Anda agar selalu hangat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEMPLATE ============ -->
+<section class="showcase" id="template">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag"><svg class="ic"><use href="#ic-wifi"/></svg><span data-en="Showcase">Showcase</span></span>
+      <h2 class="sec-title" data-en="Template Gallery">Template Gallery</h2>
+      <p class="sec-sub" data-en="A collection of ready-to-use coffee shop websites. Pick the one that best fits your brand — or go fully custom.">Koleksi website coffee shop yang siap pakai. Pilih yang paling cocok dengan brand Anda — atau buat custom dari nol.</p>
+    </div>
+    
+    <!-- Showcase Filter & Search Controls -->
+    <div class="tpl-controls reveal">
+      <div class="tpl-search-box">
+        <svg class="ic tpl-search-icon"><use href="#ic-search"/></svg>
+        <input type="text" id="tplSearch" class="tpl-search-input" placeholder="Cari template (misal: RPG, Minimalis, Dark, Luxury)..." data-en-placeholder="Search templates (e.g. RPG, Minimalis, Dark, Luxury)...">
+      </div>
+      <div class="tpl-filters">
+        <button class="filter-btn active" data-filter="all" data-en="All Templates">Semua Template</button>
+        <button class="filter-btn" data-filter="Minimalis" data-en="Minimalist">Minimalis</button>
+        <button class="filter-btn" data-filter="Company Profile" data-en="Company Profile">Company Profile</button>
+        <button class="filter-btn" data-filter="Dark" data-en="Dark & Elegant">Dark & Elegant</button>
+        <button class="filter-btn" data-filter="Luxury" data-en="Luxury">Luxury</button>
+        <button class="filter-btn" data-filter="Roastery" data-en="Roastery">Roastery</button>
+        <button class="filter-btn" data-filter="Modern" data-en="Modern">Modern</button>
+        <button class="filter-btn" data-filter="RPG" data-en="Creative / Game">Kreatif & RPG</button>
+      </div>
+    </div>
+
+    <div class="tpl-grid" id="tplGrid"></div>
+    <p class="showcase-note"><svg class="ic"><use href="#ic-info"/></svg><span data-en="Preview: screenshot of the main page for Perchance websites, and live embeds for others. Click View Demo to open the site.">Preview: screenshot halaman utama untuk website Perchance, dan tampilan langsung untuk lainnya. Klik Lihat Demo untuk membuka websitenya.</span></p>
+  </div>
+</section>
+
+<!-- ============ HARGA ============ -->
+<section class="harga" id="harga">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag"><svg class="ic"><use href="#ic-tag"/></svg><span data-en="Pricing">Harga</span></span>
+      <h2 class="sec-title" data-en="Packages &amp; Pricing">Paket &amp; Harga</h2>
+      <p class="sec-sub" data-en="The best investment for your coffee business growth. Every package includes hosting and domain.">Investasi terbaik untuk pertumbuhan bisnis kopi Anda. Semua paket sudah termasuk hosting dan domain.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card reveal">
+        <div class="price-name" data-en="Visibility Landing Page">Visibility Landing Page</div>
+        <p class="price-role" data-en="Promotion &amp; campaign">Promosi &amp; campaign</p>
+        <div class="price-amt" data-en="Starting from Rp 3.5jt">Mulai dari<br>Rp 3,5jt<small data-en="one-time, all-inclusive">sekali bayar, semua termasuk</small></div>
+        <ul class="price-list">
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="1 Landing Page">1 Halaman Landing Page</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Mobile Responsive">Mobile Responsive</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Inquiry Form">Form Inquiry</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="WhatsApp Integration">WhatsApp Integration</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Basic SEO">SEO Dasar</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Google Analytics">Google Analytics</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="1 Year Hosting">Hosting 1 Tahun</span></li>
+        </ul>
+        <a class="btn btn-ghost price-cta" href="#kontak"><span data-en="View Details">Lihat Detail</span></a>
+        <a class="price-link" data-wa href="#kontak" data-en="Ask About This Package">Konsultasi Paket</a>
+      </div>
+      <div class="price-card featured reveal">
+        <span class="badge"><svg class="ic"><use href="#ic-star"/></svg><span data-en="Most Popular">Paling Populer</span></span>
+        <div class="price-name" data-en="Business Company Website">Business Company Website</div>
+        <p class="price-role" data-en="Company profile online">Company profile online</p>
+        <div class="price-amt" data-en="Starting from Rp 7.5jt">Mulai dari<br>Rp 7,5jt<small data-en="one-time, all-inclusive">sekali bayar, semua termasuk</small></div>
+        <ul class="price-list">
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Multi Pages">Multi Halaman</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Simple CMS">CMS Sederhana</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Gallery &amp; Portfolio">Gallery &amp; Portfolio</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Contact Form">Form Kontak</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Google Analytics">Google Analytics</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="SEO Optimization">SEO Optimization</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="3 Months Maintenance">Maintenance 3 Bulan</span></li>
+        </ul>
+        <a class="btn btn-primary price-cta" href="#kontak"><span data-en="View Details">Lihat Detail</span></a>
+        <a class="price-link" data-wa href="#kontak" data-en="Ask About This Package">Konsultasi Paket</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-name" data-en="Website Growth System">Website Growth System</div>
+        <p class="price-role" data-en="For businesses that need systems">Bisnis yang butuh sistem</p>
+        <div class="price-amt" data-en="Starting from Rp 15jt">Mulai dari<br>Rp 15jt<small data-en="one-time, all-inclusive">sekali bayar, semua termasuk</small></div>
+        <ul class="price-list">
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Custom Website">Website Custom</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Admin Dashboard">Dashboard Admin</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Light CRM">CRM Ringan</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Lead Management">Lead Management</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Booking System">Booking System</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Multi-User &amp; Role">Multi-User &amp; Role</span></li>
+          <li><svg class="ic"><use href="#ic-check"/></svg><span data-en="Reporting &amp; Analytics">Reporting &amp; Analytics</span></li>
+        </ul>
+        <a class="btn btn-ghost price-cta" href="#kontak"><span data-en="View Details">Lihat Detail</span></a>
+        <a class="price-link" data-wa href="#kontak" data-en="Ask About This Package">Konsultasi Paket</a>
+      </div>
+    </div>
+    <p class="price-note" data-en="All prices include tax. Need something more specific? Every package can be tailored to your business.">Semua harga sudah termasuk pajak. Butuh yang lebih spesifik? Semua paket bisa disesuaikan dengan kebutuhan bisnis Anda.</p>
+  </div>
+</section>
+
+<!-- ============ TESTIMONI ============ -->
+<section class="testimoni" id="testimoni">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag"><svg class="ic"><use href="#ic-star"/></svg><span data-en="Testimonials">Testimoni</span></span>
+      <h2 class="sec-title" data-en="What Our Clients Say">Apa Kata Klien Kami</h2>
+      <p class="sec-sub" data-en="Client trust and satisfaction are our top priority.">Kepercayaan dan kepuasan klien adalah prioritas utama kami.</p>
+    </div>
+    <div class="tst-grid">
+      <div class="card tst reveal">
+        <div class="tst-stars"><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg></div>
+        <p data-en="Our new website immediately made customers trust us more. WhatsApp orders went up from day one!">Website baru kami langsung membuat pelanggan lebih percaya. Order via WhatsApp meningkat sejak hari pertama!</p>
+        <div class="tst-who">
+          <div class="tst-avatar">D</div>
+          <div><b data-en="Dimas — Owner, Kedai Senja">Dimas — Owner, Kedai Senja</b><span data-en="Jakarta">Jakarta</span></div>
+        </div>
+      </div>
+      <div class="card tst reveal">
+        <div class="tst-stars"><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg></div>
+        <p data-en="The process was fast and communication was clear. Even a non-tech person like me understood everything.">Prosesnya cepat dan komunikasinya jelas. Saya yang awam IT pun mudah paham semuanya.</p>
+        <div class="tst-who">
+          <div class="tst-avatar">R</div>
+          <div><b data-en="Rina — Owner, Brew &amp; Bite">Rina — Owner, Brew &amp; Bite</b><span data-en="Bandung">Bandung</span></div>
+        </div>
+      </div>
+      <div class="card tst reveal">
+        <div class="tst-stars"><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg><svg class="ic"><use href="#ic-star"/></svg></div>
+        <p data-en="Now our menu is always up to date and customers don't have to keep asking about our opening hours.">Sekarang menu kami selalu up-to-date dan pelanggan tidak perlu tanya-tanya lagi soal jam buka.</p>
+        <div class="tst-who">
+          <div class="tst-avatar">A</div>
+          <div><b data-en="Andre — Owner, Kopi Keliling">Andre — Owner, Kopi Keliling</b><span data-en="Yogyakarta">Yogyakarta</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag"><svg class="ic"><use href="#ic-chat"/></svg><span data-en="FAQ">FAQ</span></span>
+      <h2 class="sec-title" data-en="Frequently Asked Questions">Pertanyaan yang Sering Diajukan</h2>
+      <p class="sec-sub" data-en="Find answers to common questions about KopiWeb services.">Temukan jawaban atas pertanyaan umum seputar layanan KopiWeb.</p>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" data-en="How long does it take to build a website?">Berapa lama proses pembuatan website?<svg class="ic"><use href="#ic-chevron"/></svg></button>
+        <div class="faq-a"><div class="faq-a-in" data-en="Landing pages are usually done in 3–7 working days, company websites in 1–2 weeks, and growth systems in 3–6 weeks depending on complexity. We share the timeline before we start.">Landing page umumnya selesai 3–7 hari kerja, company website 1–2 minggu, dan growth system 3–6 minggu tergantung kompleksitas. Timeline pasti kami sampaikan sebelum mulai.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" data-en="Are domain and hosting included?">Apakah domain dan hosting sudah termasuk?<svg class="ic"><use href="#ic-chevron"/></svg></button>
+        <div class="faq-a"><div class="faq-a-in" data-en="Yes. All packages include hosting and domain, as listed in each package. We handle the registration and configuration for you.">Ya. Semua paket sudah termasuk hosting dan domain, sesuai isi paket masing-masing. Kami yang mengurus pendaftaran dan konfigurasinya.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" data-en="Can I get a design that matches my brand?">Bisa minta desain sesuai brand saya?<svg class="ic"><use href="#ic-chevron"/></svg></button>
+        <div class="faq-a"><div class="faq-a-in" data-en="Of course. We adapt colors, logo, and style to your coffee shop's identity. The design can be revised until you're happy.">Tentu. Kami menyesuaikan warna, logo, dan gaya dengan identitas coffee shop Anda. Desain bisa direvisi sampai Anda puas.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" data-en="What's the ordering process?">Bagaimana alur ordernya?<svg class="ic"><use href="#ic-chevron"/></svg></button>
+        <div class="faq-a"><div class="faq-a-in" data-en="Free consultation → we send a proposal and timeline → after the deal, we start building → preview &amp; revisions → website goes live. Everything runs smoothly via WhatsApp.">Konsultasi gratis → kami ajukan proposal &amp; timeline → setelah deal, kami mulai pembuatan → preview &amp; revisi → website live. Semua berjalan mudah lewat WhatsApp.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" data-en="Is maintenance available after launch?">Apakah maintenance tersedia setelah website jadi?<svg class="ic"><use href="#ic-chevron"/></svg></button>
+        <div class="faq-a"><div class="faq-a-in" data-en="Yes. Certain packages already include maintenance. For other packages, monthly or per-event support is available as needed.">Ya. Paket tertentu sudah termasuk maintenance. Untuk paket lain tersedia layanan tambahan bulanan atau per-kejadian sesuai kebutuhan.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" data-en="What if I need a feature that's not in the packages?">Bagaimana jika saya butuh fitur yang tidak ada di paket?<svg class="ic"><use href="#ic-chevron"/></svg></button>
+        <div class="faq-a"><div class="faq-a-in" data-en="We'll make a custom offer. Extra features like table reservation, loyalty points, or POS integration can be added.">Kami akan buatkan penawaran khusus. Fitur tambahan seperti reservasi meja, sistem poin, atau integrasi kasir bisa ditambahkan.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONTAK ============ -->
+<section class="kontak" id="kontak">
+  <div class="wrap">
+    <div class="cta reveal">
+      <h2 data-en="Ready to Build Your Coffee Shop Website?">Siap Membangun Website Coffee Shop Anda?</h2>
+      <p data-en="Get the best package recommendation for your business. Free consultation, no commitment.">Dapatkan rekomendasi paket terbaik untuk bisnis Anda. Konsultasi gratis, tanpa komitmen.</p>
+      <div class="cta-btns">
+        <a class="btn btn-primary btn-lg" data-wa href="#kontak"><svg class="ic"><use href="#ic-wa"/></svg><span data-en="Free Consultation via WhatsApp">Konsultasi Gratis via WhatsApp</span></a>
+        <a class="btn btn-ghost btn-lg" href="#harga"><span data-en="See Packages &amp; Pricing">Lihat Paket &amp; Harga</span></a>
+      </div>
+      <div class="contact-row">
+        <a class="contact-item" href="https://wa.me/6281234567890" target="_blank" rel="noopener">
+          <svg class="ic"><use href="#ic-wa"/></svg>
+          <div><b data-en="WhatsApp">WhatsApp</b><span>+62 812-3456-7890</span></div>
+        </a>
+        <a class="contact-item" href="mailto:hello@optibis.id">
+          <svg class="ic"><use href="#ic-mail"/></svg>
+          <div><b>Email</b><span>hello@optibis.id</span></div>
+        </a>
+        <a class="contact-item" href="https://www.instagram.com/optibis.id" target="_blank" rel="noopener">
+          <svg class="ic"><use href="#ic-ig"/></svg>
+          <div><b>Instagram</b><span>@optibis.id</span></div>
+        </a>
+        <div class="contact-item">
+          <svg class="ic"><use href="#ic-pin"/></svg>
+          <div><b data-en="Service Area">Area Layanan</b><span data-en="Serving all across Indonesia">Melayani seluruh Indonesia</span></div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Consultation Inquiry Form (Fullstack Lead Capture) -->
+    <div class="inquiry-card reveal">
+      <div class="inquiry-head">
+        <h3 data-en="Online Consultation &amp; Custom Inquiry Form">Formulir Konsultasi &amp; Pemesanan Online</h3>
+        <p data-en="Fill in your coffee shop details below. Our specialist team will review and contact you promptly.">Isi detail coffee shop Anda di bawah. Tim spesialis kami akan segera menganalisis kebutuhan dan menghubungi Anda.</p>
+      </div>
+      <form id="inquiryForm" class="inquiry-form">
+        <div class="form-group">
+          <label class="form-label" for="inqName" data-en="Your Full Name *">Nama Lengkap <span>*</span></label>
+          <input type="text" id="inqName" name="name" class="form-input" required placeholder="Contoh: Budi Santoso" data-en-placeholder="e.g. John Doe">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="inqCoffeeShop" data-en="Coffee Shop / Brand Name">Nama Coffee Shop / Brand</label>
+          <input type="text" id="inqCoffeeShop" name="coffee_shop" class="form-input" placeholder="Contoh: Kopi Senja Utama" data-en-placeholder="e.g. Sunset Coffee Roasters">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="inqWhatsapp" data-en="WhatsApp / Phone Number *">Nomor WhatsApp / Telepon <span>*</span></label>
+          <input type="tel" id="inqWhatsapp" name="whatsapp" class="form-input" required placeholder="Contoh: 081234567890" data-en-placeholder="e.g. +62 812 3456 7890">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="inqPackage" data-en="Selected Package">Paket yang Diminati</label>
+          <select id="inqPackage" name="package" class="form-select">
+            <option value="Visibility Landing Page">Visibility Landing Page (Mulai Rp 3,5jt)</option>
+            <option value="Business Company Website" selected>Business Company Website (Mulai Rp 7,5jt)</option>
+            <option value="Website Growth System">Website Growth System (Mulai Rp 15jt)</option>
+            <option value="Custom Consultation">Konsultasi Kustom / Tanya Dulu</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label class="form-label" for="inquiryTemplate" data-en="Template of Interest (Optional)">Template yang Diminati (Opsional)</label>
+          <select id="inquiryTemplate" name="template_interest" class="form-select">
+            <option value="" data-en="-- Select Template (Optional) --">-- Pilih Template (Opsional) --</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label class="form-label" for="inqNotes" data-en="Additional Notes / Target Launch">Catatan Tambahan / Target Selesai</label>
+          <textarea id="inqNotes" name="notes" class="form-textarea" placeholder="Ceritakan konsep coffee shop Anda, fitur yang dibutuhkan, atau target waktu peluncuran..." data-en-placeholder="Tell us about your coffee shop concept or specific features needed..."></textarea>
+        </div>
+        <div class="form-actions">
+          <span class="form-hint" data-en="✓ Free consultation with no obligations. Your data is kept strictly confidential.">✓ Konsultasi gratis tanpa komitmen. Data Anda terjamin kerahasiaannya.</span>
+          <button type="submit" class="btn btn-primary btn-lg form-submit-btn">
+            <svg class="ic"><use href="#ic-bolt"/></svg>
+            <span data-en="Submit Consultation Request">Kirim Permohonan Konsultasi</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="23" fill="var(--bg3)" stroke="var(--plate-ring)" stroke-width="1.8"/>
+            <g fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round">
+              <path d="M15.5 16.5q5 -8 10 0"/>
+              <path d="M17.5 11q3 -4.5 6 0"/>
+              <path d="M19.5 7.2q1 -1.6 2 0"/>
+            </g>
+            <circle cx="20.5" cy="3.2" r="1.3" fill="var(--accent)"/>
+            <path d="M29.5 22.5h2q3.2 0 3.2 4.2t-3.2 4.2h-2.8" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M12 21.5h17v5l-1.8 6.5q-1 5-5.8 5h-2.8q-4.8 0-5.8-5l-1.8-6.5v-5z" fill="var(--ink)"/>
+          </svg>
+          <span>KopiWeb</span>
+        </a>
+        <p class="footer-desc" data-en="Coffee shop website specialists — branding, digital menus, and growth systems in one package.">Spesialis pembuatan website untuk coffee shop — branding, menu digital, dan sistem pertumbuhan dalam satu paket.</p>
+        <div class="footer-social">
+          <a class="soc" href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ic"><use href="#ic-wa"/></svg></a>
+          <a class="soc" href="https://www.instagram.com/optibis.id" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#ic-ig"/></svg></a>
+          <a class="soc" href="mailto:hello@optibis.id" aria-label="Email"><svg class="ic"><use href="#ic-mail"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 data-en="Navigation">Navigasi</h4>
+        <ul>
+          <li><a href="#why" data-en="Why a Website?">Kenapa Website?</a></li>
+          <li><a href="#solusi" data-en="Solutions">Solusi</a></li>
+          <li><a href="#proses" data-en="Workflow">Alur Kerja</a></li>
+          <li><a href="#template" data-en="Templates">Template</a></li>
+          <li><a href="#harga" data-en="Pricing">Harga</a></li>
+          <li><a href="#faq" data-en="FAQ">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-en="Services">Layanan</h4>
+        <ul>
+          <li><a href="#harga" data-en="Visibility Landing Page">Visibility Landing Page</a></li>
+          <li><a href="#harga" data-en="Business Company Website">Business Company Website</a></li>
+          <li><a href="#harga" data-en="Website Growth System">Website Growth System</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-en="Contact">Kontak</h4>
+        <div class="footer-contact">
+          <div class="ci"><svg class="ic"><use href="#ic-wa"/></svg><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">+62 812-3456-7890</a></div>
+          <div class="ci"><svg class="ic"><use href="#ic-mail"/></svg><a href="mailto:hello@optibis.id">hello@optibis.id</a></div>
+          <div class="ci"><svg class="ic"><use href="#ic-ig"/></svg><a href="https://www.instagram.com/optibis.id" target="_blank" rel="noopener">@optibis.id</a></div>
+          <div class="ci"><svg class="ic"><use href="#ic-pin"/></svg><span data-en="Serving all across Indonesia">Melayani seluruh Indonesia</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-en="© 2026 KopiWeb. All rights reserved.">© <span id="year">2026</span> KopiWeb. Hak cipta dilindungi.</span>
+      <span>KopiWeb · <a href="https://www.instagram.com/optibis.id" target="_blank" rel="noopener" style="opacity:.8">Optibis</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============ SNEAK PEEK LIVE PREVIEW MODAL ============ -->
+<div id="peekModal" class="peek-modal" role="dialog" aria-modal="true" aria-labelledby="peekTitle">
+  <div class="peek-dialog">
+    <div class="peek-header">
+      <div class="peek-meta">
+        <span class="sec-tag" style="padding:4px 10px;font-size:11px"><svg class="ic" style="font-size:13px"><use href="#ic-cup"/></svg> SNEAK PEEK</span>
+        <div id="peekTitle" class="peek-title">Template Preview</div>
+      </div>
+      <div class="peek-devices">
+        <button class="peek-dev-btn active" data-device="desktop" title="Tampilan Desktop">
+          <svg class="ic" style="font-size:14px"><use href="#ic-refresh"/></svg> Desktop
+        </button>
+        <button class="peek-dev-btn" data-device="tablet" title="Tampilan Tablet (768px)">
+          Tablet
+        </button>
+        <button class="peek-dev-btn" data-device="mobile" title="Tampilan Mobile (390px)">
+          Mobile
+        </button>
+      </div>
+      <div class="peek-actions">
+        <a id="peekDirectLink" class="btn btn-ghost btn-sm" href="#" target="_blank" rel="noopener">
+          <svg class="ic" style="font-size:13px"><use href="#ic-globe"/></svg> Buka di Tab Baru
+        </a>
+        <a id="peekOrderBtn" class="btn btn-primary btn-sm" href="#" target="_blank" rel="noopener">
+          <svg class="ic" style="font-size:13px"><use href="#ic-wa"/></svg> Pesan Template Ini
+        </a>
+        <button id="peekCloseBtn" class="peek-close" aria-label="Tutup Preview">
+          <svg class="ic"><use href="#ic-x"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="peek-body">
+      <div id="peekWrap" class="peek-frame-wrap device-desktop">
+        <div id="peekLoading" class="peek-loading">
+          <div class="peek-spinner"></div>
+          <span>Memuat Sneak Peek Template...</span>
+        </div>
+        <iframe id="peekFrame" class="peek-iframe" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Scripts: Local Anime.js with CDN fallback, interactions & app logic -->
+<script src="js/anime.umd.min.js" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/animejs@4.0.0/lib/anime.umd.min.js';"></script>
+<script src="js/anime-interactions.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1445 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dokumentasi KP — KopiWeb</title>
+<style>
+  :root{--ink:#1b1b1b;--muted:#555;--line:#d9d2c7;--accent:#a8641e;--bg:#fffdf9}
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);margin:0;padding:48px 24px;line-height:1.62}
+  main{max-width:900px;margin:0 auto}
+  h1{font-size:30px;border-bottom:3px solid var(--accent);padding-bottom:12px;margin-top:0}
+  h2{font-size:23px;margin-top:44px;border-bottom:1px solid var(--line);padding-bottom:8px;color:#3a2a18}
+  h3{font-size:18px;margin-top:30px;color:#4a3520}
+  h4{font-size:15.5px;margin-top:22px}
+  p,li{font-size:14.5px}
+  code{background:#f3ede2;padding:1.5px 5px;border-radius:4px;font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace}
+  pre{background:#241d14;color:#f5ead6;padding:16px 18px;border-radius:10px;overflow:auto;font-size:12.8px;line-height:1.5}
+  pre code{background:none;color:inherit;padding:0}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:13.5px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#f3ede2}
+  tr:nth-child(even) td{background:#fbf8f2}
+  blockquote{border-left:4px solid var(--accent);margin:16px 0;padding:8px 16px;background:#faf5ec;color:var(--muted)}
+  img{max-width:100%;border:1px solid var(--line);border-radius:10px;margin:10px 0 22px;display:block}
+  hr{border:0;border-top:1px solid var(--line);margin:34px 0}
+  a{color:var(--accent)}
+  @media print{body{padding:0;background:#fff}main{max-width:none}h2{page-break-after:avoid}table,pre,img{page-break-inside:avoid}pre{background:#f3ede2;color:#241d14}}
+</style></head>
+<body><main>
+<h1>DOKUMENTASI TEKNIS &amp; LAPORAN AKHIR KERJA PRAKTIK (KP)</h1>
+<h2>Project: <strong>KopiWeb</strong> — Website Pemasaran &amp; Katalog Jasa Pembuatan Website Coffee Shop</h2>
+<blockquote>
+<p>Dokumen ini disusun berdasarkan <strong>kode yang benar-benar ada di dalam project</strong> (<code>main.pjs</code> + <code>index.html</code>) dan <strong>hasil pengujian langsung pada halaman live</strong>.
+Bagian <em>&quot;Cara Kerja Web&quot;</em> <strong>tidak</strong> dimasukkan ke dokumen ini (sesuai permintaan, dibahas terpisah).</p>
+</blockquote>
+<hr>
+<h2>0. Lembar Identitas (isi sesuai data KP)</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Nama Mahasiswa</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>NIM / Kelas</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>Program Studi</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>Tempat KP / Perusahaan</td>
+<td><code>[ISI]</code> (indikasi dari kode: <strong>Optibis</strong> / optibis.id)</td>
+</tr>
+<tr>
+<td>Periode KP</td>
+<td><code>[ISI]</code> — s/d <code>[ISI]</code></td>
+</tr>
+<tr>
+<td>Pembimbing Lapangan</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>Pembimbing Akademik</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>Judul Project</td>
+<td>KopiWeb — Website layanan pembuatan website coffee shop</td>
+</tr>
+<tr>
+<td>URL Produksi</td>
+<td><a href="https://perchance.org/home-kopi-shop">https://perchance.org/home-kopi-shop</a></td>
+</tr>
+<tr>
+<td>Nama Generator (internal)</td>
+<td><code>home-kopi-shop</code></td>
+</tr>
+<tr>
+<td>Repository</td>
+<td><code>[ISI jika ada]</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>1. Laporan Ringkas (Executive Summary)</h2>
+<h3>1.1 Latar Belakang</h3>
+<p>Coffee shop skala UMKM umumnya sudah punya akun media sosial, tetapi belum punya <strong>website resmi</strong> yang menampung informasi inti (menu, harga, jam buka, lokasi, kontak). Akibatnya calon pelanggan yang mencari lewat Google tidak menemukan informasi yang lengkap dan kredibel, sementara pemilik usaha harus menjawab pertanyaan yang sama berulang kali lewat chat.</p>
+<p>Di sisi lain, agency/UMKM penyedia jasa (dalam project ini: <strong>Optibis</strong>) membutuhkan sebuah <strong>halaman pemasaran (marketing/landing page)</strong> yang dapat menjelaskan layanan, menampilkan paket harga, membuktikan kualitas lewat portofolio, dan mengarahkan calon klien ke satu aksi yang paling murah dan paling mudah: <strong>konsultasi gratis via WhatsApp</strong>.</p>
+<p>Selama masa Kerja Praktik dikembangkan <strong>KopiWeb</strong>: satu aplikasi web satu-halaman (<em>single-page static site</em>) yang berfungsi sebagai <strong>hub pemasaran sekaligus etalase (showcase) portofolio template</strong> website coffee shop.</p>
+<h3>1.2 Tujuan / Problem Statement</h3>
+<p><strong>Problem statement:</strong></p>
+<blockquote>
+<p>&quot;Bagaimana membantu coffee shop UMKM tampil profesional secara online dengan waktu &amp; biaya rendah, sementara proses pemesanan jasa tetap sesederhana mungkin bagi pemilik usaha non-teknis?&quot;</p>
+</blockquote>
+<p><strong>Tujuan yang diselesaikan:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Kode</th>
+<th>Tujuan</th>
+<th>Indikator keberhasilan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T1</td>
+<td>Menyediakan satu halaman pemasaran yang menjelaskan layanan, alur kerja, dan harga secara jelas</td>
+<td>Terdapat seksi Why / Solusi / Proses / Harga / FAQ yang dapat dibaca berurutan</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Menampilkan portofolio nyata (bukti sosial) agar calon klien percaya</td>
+<td>Katalog template berisi 45 item yang dapat dipratinjau/dibuka</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Mengarahkan calon klien ke satu aksi konversi (WhatsApp)</td>
+<td>Semua tombol CTA (<code>data-wa</code>) menghasilkan deep-link WhatsApp dengan pesan terisi otomatis</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Website ringan, cepat, tanpa biaya server aplikasi</td>
+<td>Arsitektur statis tanpa backend; deploy di platform hosting statis</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Dapat dijangkau semua perangkat &amp; dua bahasa</td>
+<td>Tampilan responsif (diuji di 390×844 px &amp; 1280×800 px) + switch bahasa ID/EN</td>
+</tr>
+</tbody></table>
+<h3>1.3 Scope (Batasan) yang Dibuat Selama KP</h3>
+<p><strong>Termasuk dalam scope (in-scope):</strong></p>
+<ol>
+<li>Aplikasi KopiWeb (halaman pemasaran + katalog portofolio) — satu halaman, 11 seksi.</li>
+<li>Sistem dwibahasa (Bahasa Indonesia / English) berbasis atribut <code>data-en</code>.</li>
+<li>Sistem dua tema warna (<em>espresso</em> = gelap, <em>latte</em> = terang).</li>
+<li>Mesin katalog/showcase berbasis data (<code>SHOWCASE</code>) yang menyusun 45 kartu template secara dinamis.</li>
+<li>Integrasi konversi: WhatsApp click-to-chat, e-mail, Instagram.</li>
+<li>Animasi UI (entrance, ambient loop, scroll-reveal, hover) dengan anime.js.</li>
+<li>Optimasi dasar SEO &amp; metadata (<code>$meta</code> Perchance) serta responsivitas.</li>
+</ol>
+<p><strong>Di luar scope (batasan yang disepakati):</strong></p>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Batasan</th>
+<th>Alasan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Tidak ada backend aplikasi, database, dan API milik sendiri</td>
+<td>Kebutuhan bisnis cukup sebagai marketing site statis; menghemat biaya server &amp; waktu</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Tidak ada form pendaftaran/login/pembayaran</td>
+<td>Proses order disepakati melalui WhatsApp</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Tidak ada CMS — daftar template <em>hardcoded</em> di dalam kode</td>
+<td>Jumlah template terbatas dan pengelola hanya developer</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Lead capture hanya berupa deep-link WhatsApp/e-mail (tidak tersimpan)</td>
+<td>Mengikuti alur bisnis yang sudah berjalan</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Konten seksi (harga, FAQ, testimoni) statis di dalam HTML</td>
+<td>Belum diperlukan halaman admin</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Kompatibilitas diuji pada browser modern (Chrome/Edge/Safari/Firefox versi terkini)</td>
+<td>Target pasar perangkat modern</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>2. Daftar Project &amp; Modul</h2>
+<h3>2.1 Project Utama — Aplikasi KopiWeb (<code>home-kopi-shop</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Kode</th>
+<th>Modul / Sub-fitur</th>
+<th>Fungsi Utama</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>M01</strong></td>
+<td>Struktur halaman &amp; navigasi</td>
+<td>Navbar tetap (<em>fixed</em>) + 11 seksi ber-anchor (<code>#top</code>, <code>#why</code>, <code>#solusi</code>, <code>#fitur</code>, <code>#dampak</code>, <code>#proses</code>, <code>#template</code>, <code>#harga</code>, <code>#testimoni</code>, <code>#faq</code>, <code>#kontak</code>) + smooth scroll; navbar berubah menjadi <em>blur</em> saat halaman di-scroll</td>
+</tr>
+<tr>
+<td><strong>M02</strong></td>
+<td>Sistem tema (<em>theme switcher</em>)</td>
+<td>Dua palet warna (espresso/latte) via CSS custom properties pada <code>html[data-theme]</code>; preferensi disimpan di <code>localStorage</code></td>
+</tr>
+<tr>
+<td><strong>M03</strong></td>
+<td>Sistem dwibahasa (i18n)</td>
+<td>Terjemahan ID/EN via atribut <code>data-en</code>; teks asli disimpan otomatis di <code>dataset.orig</code>; konten dinamis (katalog, WhatsApp) ikut diterjemahkan</td>
+</tr>
+<tr>
+<td><strong>M04</strong></td>
+<td>Mesin katalog / showcase</td>
+<td>Array <code>SHOWCASE</code> (45 objek) dirender menjadi kartu: pratinjau screenshot, judul, tag, deskripsi, tombol &quot;Lihat Demo&quot; &amp; &quot;Pesan Template Ini&quot;</td>
+</tr>
+<tr>
+<td><strong>M05</strong></td>
+<td>CTA WhatsApp ter-lokalisasi</td>
+<td>Semua elemen <code>[data-wa]</code> mendapat <code>href</code> <code>https://wa.me/&lt;nomor&gt;?text=&lt;pesan&gt;</code>; pesan pembuka otomatis menyesuaikan bahasa aktif</td>
+</tr>
+<tr>
+<td><strong>M06</strong></td>
+<td>FAQ accordion</td>
+<td>6 pertanyaan; hanya satu jawaban terbuka pada satu waktu (<em>exclusive accordion</em>)</td>
+</tr>
+<tr>
+<td><strong>M07</strong></td>
+<td>Animasi UI (anime.js)</td>
+<td>Hero entrance (timeline), loop ambient (uap kopi, cangkir mengapung, biji kopi berputar), scroll-reveal via IntersectionObserver, hover &quot;blend&quot;</td>
+</tr>
+<tr>
+<td><strong>M08</strong></td>
+<td>Metadata &amp; SEO</td>
+<td><code>$meta</code> (title, description, tags) + struktur heading semantik + ikon SVG inline</td>
+</tr>
+<tr>
+<td><strong>M09</strong></td>
+<td>Responsif &amp; menu mobile</td>
+<td>Breakpoint 1080/1000/760 px; hamburger menu; ilustrasi disembunyikan di layar kecil</td>
+</tr>
+<tr>
+<td><strong>M10</strong></td>
+<td>Degradasi bertahap (<em>graceful degradation</em>)</td>
+<td>Semua animasi opsional: jika anime.js gagal dimuat atau pengguna memakai <em>reduced motion</em>, halaman tetap tampil normal</td>
+</tr>
+</tbody></table>
+<h3>2.2 Modul Pendukung — Katalog Template Website Coffee Shop</h3>
+<p>Katalog pada seksi <code>#template</code> berisi <strong>45 website</strong> yang dipakai sebagai bukti portofolio. Item dibedakan menjadi dua kelompok berdasarkan cara pratinjaunya:</p>
+<table>
+<thead>
+<tr>
+<th>Kelompok</th>
+<th>Jumlah</th>
+<th>Cara pratinjau</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Template dengan screenshot</td>
+<td>14</td>
+<td>Gambar <code>shot</code> (URL uploads.dev) ditampilkan di dalam frame mock-browser</td>
+</tr>
+<tr>
+<td>Template tanpa screenshot</td>
+<td>31</td>
+<td>Di-embed langsung (<code>&lt;iframe loading=&quot;lazy&quot;&gt;</code>)</td>
+</tr>
+</tbody></table>
+<p>Platform deployment template: <strong>Perchance</strong> (generator publik, mis. <code>kape-rpg</code>, <code>djawa-kape</code>, <code>neon-kape</code>, <code>pixel-cafe</code>, <code>kuro-kape</code>, <code>noir-kape</code>, <code>larik</code>, dst.), <strong>Vercel</strong> (mis. <code>pure-brew-co</code>, <code>norva-coffe</code>, <code>kroma-xt8r</code>, <code>cofffu</code>, rangkaian <code>tugas-template-coffee-shop-*</code>), dan <strong>GitHub Pages</strong> (mis. <code>Slowpour</code>, <code>Maison-Seruni</code>). Daftar lengkap ada di <strong>Lampiran B</strong>.</p>
+<blockquote>
+<p>Catatan: bila KP Anda mencakup pembuatan template-template tersebut, isi kolom &quot;Dikerjakan oleh / Peran&quot; pada tabel Lampiran B agar inventarisasi project per-anggota tim menjadi jelas.</p>
+</blockquote>
+<hr>
+<h2>3. Dokumentasi Arsitektur &amp; Perancangan</h2>
+<h3>3.1 System Architecture / Tech Stack</h3>
+<table>
+<thead>
+<tr>
+<th>Lapisan</th>
+<th>Teknologi</th>
+<th>Versi</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Platform / runtime</td>
+<td>Perchance Generator Engine (perchance-js)</td>
+<td>platform berjalan (SaaS)</td>
+<td>Menyediakan hosting statis, iframe ber-<em>origin</em> tersendiri, eksekusi template <code>main.pjs</code>, dan live preview di editor</td>
+</tr>
+<tr>
+<td>Bahasa markup</td>
+<td>HTML5</td>
+<td>—</td>
+<td><code>index.html</code> = <strong>isi <code>&lt;body&gt;</code></strong> (tanpa tag <code>&lt;html&gt;/&lt;head&gt;/&lt;body&gt;</code>)</td>
+</tr>
+<tr>
+<td>Bahasa styling</td>
+<td>CSS3 (Custom Properties, Grid, Flexbox, <code>clamp()</code>)</td>
+<td>—</td>
+<td>2 tema via variabel CSS; tanpa CSS framework</td>
+</tr>
+<tr>
+<td>Bahasa pemrograman</td>
+<td>JavaScript (vanilla)</td>
+<td>ES2020+</td>
+<td>Tanpa transpiler/bundler</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td><strong>Tidak ada</strong> (vanilla JS)</td>
+<td>—</td>
+<td>Sengaja dipilih agar ringan &amp; tanpa proses build</td>
+</tr>
+<tr>
+<td>Library animasi</td>
+<td><strong>anime.js</strong></td>
+<td><strong>4.0.0</strong> (UMD via <code>cdn.jsdelivr.net</code>)</td>
+<td>Timeline, stagger, <code>composition:&quot;blend&quot;</code></td>
+</tr>
+<tr>
+<td>Font web</td>
+<td>Google Fonts — Plus Jakarta Sans (500–800), Inter (400–700)</td>
+<td>—</td>
+<td>Dimuat via <code>fonts.googleapis.com</code> + <code>preconnect</code></td>
+</tr>
+<tr>
+<td>Ikon</td>
+<td>Inline SVG sprite (<code>&lt;symbol&gt;</code> + <code>&lt;use&gt;</code>)</td>
+<td>—</td>
+<td>Tidak ada dependensi ikon eksternal</td>
+</tr>
+<tr>
+<td>Penyimpanan sisi klien</td>
+<td>Web Storage API (<code>localStorage</code>)</td>
+<td>—</td>
+<td>Kunci <code>kw-theme</code>, <code>kw-lang</code></td>
+</tr>
+<tr>
+<td>Screenshot generator</td>
+<td>Perchance public API <code>getGeneratorScreenshot</code></td>
+<td>—</td>
+<td>Fallback bila <code>shot</code> pada data template kosong</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>Perchance (aplikasi utama), Vercel &amp; GitHub Pages (template)</td>
+<td>—</td>
+<td>Static hosting</td>
+</tr>
+<tr>
+<td>Kontrol versi</td>
+<td>Git / GitHub</td>
+<td><code>[ISI jika ada]</code></td>
+<td><code>[ISI jika ada]</code></td>
+</tr>
+<tr>
+<td>IDE / alat bantu</td>
+<td>Editor Perchance (live preview)</td>
+<td>—</td>
+<td><code>[ISI jika ada]</code></td>
+</tr>
+</tbody></table>
+<p><strong>Karakteristik arsitektur:</strong> <em>static, client-side, single-page, zero-build, zero-backend.</em> Tidak ada server aplikasi, tidak ada database, tidak ada proses kompilasi.</p>
+<pre><code>┌──────────────────────────────────────────────────────────────┐
+│  Browser pengguna                                            │
+│                                                              │
+│  ┌────────────────────────────────────────────────────────┐  │
+│  │  index.html (body content, di-host oleh Perchance)      │  │
+│  │  ├─ &lt;style&gt;  : tema espresso/latte (CSS variables)      │  │
+│  │  ├─ &lt;svg&gt;    : sprite ikon                              │  │
+│  │  ├─ seksi    : hero … kontak + footer                   │  │
+│  │  ├─ &lt;script&gt; : state, i18n, tema, showcase, WhatsApp    │  │
+│  │  └─ &lt;script&gt; : animasi anime.js (opsional)              │  │
+│  └────────────────────────────────────────────────────────┘  │
+│        │                 │                    │              │
+│        │ localStorage    │ fetch gap-success  │ navigasi     │
+│        ▼                 ▼                    ▼              │
+│  kw-theme, kw-lang   getGeneratorScreenshot   wa.me / mailto │
+│                      (hanya bila perlu)       Instagram       │
+└──────────────────────────────────────────────────────────────┘
+
+main.pjs  ──►  $meta (title, description, tags)  ──►  SEO / listing generator
+</code></pre>
+<p><em>(File <code>main.pjs</code> hanya berisi metadata <code>$meta</code>; seluruh logika aplikasi berada di <code>index.html</code>.)</em></p>
+<h3>3.2 Database Structure</h3>
+<p><strong>Tidak ada database</strong> pada project ini (lihat batasan scope #1). Karena itu <strong>tidak ada ERD / tabel SQL</strong>. Sebagai gantinya, berikut struktur data yang benar-benar dipakai aplikasi:</p>
+<h4>(a) Model data katalog — objek <code>SHOWCASE</code></h4>
+<p>Didefinisikan sebagai array of object di <code>index.html</code>. Setiap elemen adalah satu kartu template.</p>
+<pre><code class="language-js">const SHOWCASE = [
+  {
+    name: { id: &quot;Kape RPG&quot;, en: &quot;Kape RPG&quot; },   // string | {id, en}
+    url:  &quot;https://perchance.org/kape-rpg#/&quot;,   // string (URL)
+    shot: &quot;https://user.uploads.dev/file/....jpg&quot;, // string (opsional: URL screenshot)
+    tags: [&quot;RPG&quot;, &quot;Game&quot;, &quot;Kreatif&quot;],           // string[]
+    desc: { id: &quot;...&quot;, en: &quot;...&quot; }              // string | {id, en}
+  },
+  /* …45 item total */
+];
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Tipe</th>
+<th>Wajib</th>
+<th>Contoh</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>name</code></td>
+<td><code>string</code> | <code>{id,en}</code></td>
+<td>Ya</td>
+<td><code>{id:&quot;Kape RPG&quot;, en:&quot;Kape RPG&quot;}</code></td>
+<td>Judul kartu; objek <code>{id,en}</code> untuk teks dwibahasa</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td><code>string</code></td>
+<td>Ya*</td>
+<td><code>https://perchance.org/larik#/</code></td>
+<td>URL demo; jika kosong/<code>null</code>, kartu tampil sebagai placeholder non-aktif</td>
+</tr>
+<tr>
+<td><code>shot</code></td>
+<td><code>string</code></td>
+<td>Tidak</td>
+<td><code>https://user.uploads.dev/file/….jpg</code></td>
+<td>URL screenshot. Jika kosong → sistem otomatis memakai screenshot Perchance, atau <code>&lt;iframe&gt;</code></td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td><code>string[]</code></td>
+<td>Ya</td>
+<td><code>[&quot;RPG&quot;,&quot;Game&quot;]</code></td>
+<td>Label kategori yang dirender sebagai pill</td>
+</tr>
+<tr>
+<td><code>desc</code></td>
+<td><code>string</code> | <code>{id,en}</code></td>
+<td>Ya</td>
+<td><code>{id:&quot;…&quot;, en:&quot;…&quot;}</code></td>
+<td>Deskripsi singkat</td>
+</tr>
+</tbody></table>
+<p>Aturan penentuan pratinjau (fungsi <code>renderShowcase()</code>):</p>
+<pre><code>shot ada?              → tampilkan &lt;img src=&quot;{shot}&quot;&gt;
+shot kosong &amp; url ada? → coba... lalu &lt;iframe loading=&quot;lazy&quot; src=&quot;{url}&quot;&gt;
+url kosong?            → tampilkan placeholder &quot;Website akan tampil di sini&quot;
+</code></pre>
+<h4>(b) Skema penyimpanan sisi klien (<code>localStorage</code>)</h4>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Nilai valid</th>
+<th>Default</th>
+<th>Ditulis oleh</th>
+<th>Dibaca oleh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>kw-theme</code></td>
+<td><code>&quot;espresso&quot;</code> | <code>&quot;latte&quot;</code></td>
+<td><code>&quot;espresso&quot;</code></td>
+<td><code>setTheme()</code></td>
+<td>skrip init <code>&lt;head&gt;</code></td>
+</tr>
+<tr>
+<td><code>kw-lang</code></td>
+<td><code>&quot;id&quot;</code> | <code>&quot;en&quot;</code></td>
+<td><code>&quot;id&quot;</code></td>
+<td><code>setLang()</code></td>
+<td>skrip init <code>&lt;head&gt;</code> — <strong>lihat BUG-01</strong></td>
+</tr>
+</tbody></table>
+<h3>3.3 API Documentation</h3>
+<p>Aplikasi ini <strong>tidak mengekspos/menyediakan endpoint API sendiri</strong> (tidak ada backend). Yang ada adalah <strong>integrasi pihak ketiga (outbound)</strong> yang dipanggil dari sisi browser. Berikut dokumentasinya agar tetap sesuai format:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Nama</th>
+<th>Method</th>
+<th>URL / Endpoint</th>
+<th>Parameter</th>
+<th>Contoh</th>
+<th>Digunakan oleh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A1</td>
+<td>WhatsApp Click-to-Chat</td>
+<td><code>GET</code> (navigasi)</td>
+<td><code>https://wa.me/{nomor}?text={pesan}</code></td>
+<td><code>{nomor}</code> = nomor format internasional (tanpa <code>+</code>/<code>0</code>), <code>{pesan}</code> = teks ter-<code>encodeURIComponent</code></td>
+<td><code>https://wa.me/6281234567890?text=Halo%20KopiWeb!%20Saya%20ingin%20konsultasi...</code></td>
+<td>semua elemen <code>[data-wa]</code> (7 tombol)</td>
+</tr>
+<tr>
+<td>A2</td>
+<td>Perchance — Generator Screenshot</td>
+<td><code>GET</code></td>
+<td><code>https://perchance.org/api/getGeneratorScreenshot?generatorName={name}</code></td>
+<td><code>{name}</code> = nama generator Perchance</td>
+<td><code>…?generatorName=kape-rpg</code></td>
+<td><code>perchanceShot()</code>, dipakai otomatis bila <code>shot</code> kosong</td>
+</tr>
+<tr>
+<td>A3</td>
+<td>Perchance — Get Generator &amp; Dependencies</td>
+<td><code>GET</code></td>
+<td><code>https://perchance.org/api/getGeneratorsAndDependencies?generatorNames={list}</code></td>
+<td><code>{list}</code> = daftar nama dipisah koma</td>
+<td><code>…?generatorNames=animal,adjective</code></td>
+<td><em>Tidak dipakai saat ini</em> — kandidat untuk pengembangan (lihat §6)</td>
+</tr>
+<tr>
+<td>A4</td>
+<td>E-mail</td>
+<td><code>mailto:</code></td>
+<td><code>mailto:hello@optibis.id</code></td>
+<td>—</td>
+<td>—</td>
+<td>footer &amp; kartu kontak</td>
+</tr>
+<tr>
+<td>A5</td>
+<td>Instagram</td>
+<td><code>GET</code> (navigasi)</td>
+<td><code>https://www.instagram.com/optibis.id</code></td>
+<td>—</td>
+<td>—</td>
+<td>footer &amp; kartu kontak</td>
+</tr>
+<tr>
+<td>A6</td>
+<td>Embed template</td>
+<td><code>GET</code> (iframe)</td>
+<td><code>{url}</code> milik masing-masing template</td>
+<td><code>loading=&quot;lazy&quot;</code>, <code>title</code></td>
+<td><code>&lt;iframe src=&quot;https://pure-brew-co.vercel.app/&quot; loading=&quot;lazy&quot;&gt;</code></td>
+<td>31 kartu katalog tanpa <code>shot</code></td>
+</tr>
+</tbody></table>
+<p><strong>Contoh penggunaan A1 (hasil nyata dari pengujian):</strong></p>
+<pre><code class="language-js">// input  : nomor = &quot;6281234567890&quot;, bahasa aktif = &quot;en&quot;
+// output : href pada tombol
+&quot;https://wa.me/6281234567890?text=Hi%20KopiWeb!%20I&#39;d%20like%20a%20free%20consultation%20about%20building%20a%20website%20for%20my%20coffee%20shop.&quot;
+</code></pre>
+<p><strong>Contoh respons A2:</strong> mengembalikan <strong>gambar</strong> (bukan JSON), sehingga dipakai langsung sebagai <code>src</code> <code>&lt;img&gt;</code>.</p>
+<hr>
+<h2>4. Panduan Instalasi &amp; Deployment (Setup Guide)</h2>
+<h3>4.1 Prasyarat Sistem (Prerequisites)</h3>
+<table>
+<thead>
+<tr>
+<th>Kebutuhan</th>
+<th>Versi / Spesifikasi</th>
+<th>Wajib?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Browser modern</td>
+<td>Chrome/Edge/Firefox/Safari versi terkini</td>
+<td><strong>Wajib</strong></td>
+</tr>
+<tr>
+<td>Akun Perchance</td>
+<td>gratis — untuk menyimpan &amp; mempublikasikan generator</td>
+<td><strong>Wajib</strong> (untuk deploy)</td>
+</tr>
+<tr>
+<td>Koneksi internet</td>
+<td>—</td>
+<td><strong>Wajib</strong> (Google Fonts, anime.js CDN, screenshot/iframe)</td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>v18+</td>
+<td>Tidak wajib — hanya jika mengelola template eksternal (Vercel) yang memakai build tool</td>
+</tr>
+<tr>
+<td>Python 3</td>
+<td>3.x</td>
+<td>Opsional — untuk static server lokal (<code>python3 -m http.server</code>)</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>versi terkini</td>
+<td>Opsional — untuk kontrol versi template eksternal</td>
+</tr>
+<tr>
+<td>MySQL / PHP / dsb.</td>
+<td>—</td>
+<td><strong>Tidak diperlukan</strong> (tidak ada backend/database)</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>Project ini <strong>zero-install</strong>: tidak ada <code>npm install</code>, tidak ada <code>package.json</code>, tidak ada proses build.</p>
+</blockquote>
+<h3>4.2 Menjalankan Project di Lingkungan Lokal (Development)</h3>
+<p><strong>Cara A — Editor Perchance (direkomendasikan)</strong></p>
+<ol>
+<li>Buka <a href="https://perchance.org">https://perchance.org</a> dan login.</li>
+<li>Buka generator <code>home-kopi-shop</code> (atau fork/duplikat untuk eksperimen) sehingga masuk ke editor.</li>
+<li>Edit langsung dua berkas inti:<ul>
+<li><code>main.pjs</code> → metadata <code>$meta</code> (judul, deskripsi, tags).</li>
+<li><code>index.html</code> → seluruh HTML/CSS/JS halaman.</li>
+</ul>
+</li>
+<li>Perubahan tampil seketika pada <strong>live preview</strong> di panel kanan editor.</li>
+<li>Cek <strong>Console</strong> browser untuk memastikan tidak ada error saat halaman dimuat.</li>
+</ol>
+<p><strong>Cara B — Menjalankan sebagai file statis lokal (opsional, untuk uji CSS/JS murni)</strong></p>
+<pre><code class="language-bash"># 1) ambil isi project, letakkan index.html di dalam satu folder
+mkdir kopiweb-local &amp;&amp; cd kopiweb-local
+
+# 2) jalankan static server
+python3 -m http.server 8080
+#   atau: npx serve .
+#   atau: php -S localhost:8080   (jika ada PHP)
+
+# 3) buka di browser
+#    http://localhost:8080
+</code></pre>
+<blockquote>
+<p><strong>Penting:</strong> <code>index.html</code> pada project ini adalah <strong>isi <code>&lt;body&gt;</code></strong> untuk Perchance. Saat dijalankan sebagai file statis, seluruh HTML/CSS/JS tetap bekerja, tetapi <strong>sintaks template Perchance</strong> (blok <code>[...]</code> pada teks/atribut, dan <code>main.pjs</code>) <strong>tidak dievaluasi</strong>, sehingga nilai dinamis dari <code>main.pjs</code> tidak muncul. Untuk pengujian yang 100% akurat gunakan <strong>Cara A</strong>.</p>
+</blockquote>
+<p><strong>Struktur berkas project:</strong></p>
+<pre><code>home-kopi-shop/
+├── main.pjs                     # metadata $meta (title, description, tags)
+├── index.html                   # SELURUH aplikasi (body content + &lt;style&gt; + &lt;script&gt;)
+└── src/                         # aset pendukung (opsional, tidak dipakai produksi saat ini)
+    ├── logos/                   # 3 berkas logo SVG alternatif
+    └── capture/                 # berkas eksperimen capture (noir*)
+</code></pre>
+<h3>4.3 Langkah Deploy ke Server Produksi</h3>
+<p><strong>A. Aplikasi utama (Perchance statis)</strong></p>
+<ol>
+<li>Pastikan seluruh konfigurasi sudah benar (lihat checklist §4.4).</li>
+<li>Klik <strong>Save</strong> pada editor Perchance.</li>
+<li>Halaman publik otomatis tersedia di:<pre><code>https://perchance.org/home-kopi-shop
+</code></pre>
+</li>
+<li>(Opsional) Atur <code>$meta.title</code>, <code>$meta.description</code>, <code>$meta.image</code> pada <code>main.pjs</code> agar tampilan listing &amp; <em>share card</em> menarik.</li>
+<li>Uji ulang halaman publik (bukan hanya preview) di desktop + mobile.</li>
+</ol>
+<p><strong>B. Template eksternal (Vercel / GitHub Pages)</strong></p>
+<pre><code class="language-bash"># contoh alur untuk satu template
+git clone &lt;repo-template&gt;
+cd &lt;repo-template&gt;
+npm install          # hanya jika template punya build step
+npm run build
+
+# Vercel:  vercel --prod   (atau hubungkan repo ke dashboard Vercel)
+# GitHub Pages: push ke branch gh-pages / aktifkan Pages di Settings repo
+</code></pre>
+<p>Lalu tambahkan entri baru ke array <code>SHOWCASE</code> di <code>index.html</code>:</p>
+<pre><code class="language-js">{ name:{id:&quot;Nama Template&quot;, en:&quot;Template Name&quot;},
+  url:&quot;https://hasil-deploy.vercel.app/&quot;,
+  shot:&quot;https://user.uploads.dev/file/…jpg&quot;,     // opsional
+  tags:[&quot;Company Profile&quot;], desc:{id:&quot;…&quot;, en:&quot;…&quot;} }
+</code></pre>
+<h3>4.4 Konfigurasi Variabel Lingkungan (Environment)</h3>
+<p>Project ini <strong>tidak memakai berkas <code>.env</code></strong> dan <strong>tidak menyimpan kredensial apa pun</strong>, karena seluruhnya berjalan di sisi klien (statis) tanpa backend. Semua nilai yang dapat dikonfigurasi berada <strong>di dalam kode</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Konfigurasi</th>
+<th>Lokasi di kode</th>
+<th>Nilai saat ini</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Nomor WhatsApp</td>
+<td><code>const WA_NUMBER</code> (index.html)</td>
+<td><code>6281234567890</code></td>
+<td>Format internasional tanpa <code>+</code></td>
+</tr>
+<tr>
+<td>Pesan pembuka WhatsApp</td>
+<td><code>const WA_MSG</code> (index.html)</td>
+<td>ID &amp; EN</td>
+<td>Dikirim otomatis saat CTA diklik</td>
+</tr>
+<tr>
+<td>Data katalog template</td>
+<td><code>const SHOWCASE</code> (index.html)</td>
+<td>45 item</td>
+<td>Sumber tunggal katalog</td>
+</tr>
+<tr>
+<td>E-mail kontak</td>
+<td><code>href=&quot;mailto:…&quot;</code> (footer/kontak)</td>
+<td><code>hello@optibis.id</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Instagram</td>
+<td><code>href=&quot;https://www.instagram.com/…&quot;</code></td>
+<td><code>optibis.id</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Metadata SEO</td>
+<td><code>main.pjs</code> → <code>$meta</code></td>
+<td>title/description/tags</td>
+<td>Tanpa <code>$meta.image</code> (lihat §6)</td>
+</tr>
+<tr>
+<td>Preferensi default tema</td>
+<td>skrip init (index.html)</td>
+<td><code>espresso</code></td>
+<td>Fallback bila <code>localStorage</code> kosong</td>
+</tr>
+<tr>
+<td>Preferensi default bahasa</td>
+<td>skrip init (index.html)</td>
+<td><code>id</code></td>
+<td>Fallback bila <code>localStorage</code> kosong</td>
+</tr>
+</tbody></table>
+<p><strong>Template <code>.env</code> (hanya untuk skenario migrasi ke hosting ber-env, mis. Vercel/Netlify — tidak dipakai sekarang):</strong></p>
+<pre><code class="language-dotenv"># ------------------------------------------------------------------
+# Contoh .env — BELUM dipakai oleh project ini (aplikasi masih statis)
+# JANGAN pernah menaruh password/token/secret di berkas ini pada project
+# yang seluruh kodenya dikirim ke browser: nilai client-side selalu publik.
+# ------------------------------------------------------------------
+WA_NUMBER=6281234567890
+WA_MSG_ID=&quot;Halo KopiWeb! Saya ingin konsultasi gratis…&quot;
+WA_MSG_EN=&quot;Hi KopiWeb! I&#39;d like a free consultation…&quot;
+CONTACT_EMAIL=hello@optibis.id
+CONTACT_INSTAGRAM=optibis.id
+DEFAULT_THEME=espresso
+DEFAULT_LANG=id
+# Jika nanti memakai backend: simpan secret hanya di server, contoh:
+# DATABASE_URL=            # server-side only, JANGAN di-prefix VITE_/NEXT_PUBLIC_
+# ADMIN_API_TOKEN=         # server-side only
+</code></pre>
+<blockquote>
+<p><strong>Catatan keamanan:</strong> pada aplikasi statis, semua yang ada di <code>index.html</code>/<code>main.pjs</code> bersifat <strong>publik</strong>. Tidak ada dan tidak boleh ada kredensial di sana.</p>
+</blockquote>
+<p><strong>Checklist sebelum deploy:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> <code>WA_NUMBER</code> sudah diganti ke nomor bisnis yang aktif.</li>
+<li><input disabled="" type="checkbox"> <code>WA_MSG.id</code> &amp; <code>WA_MSG.en</code> sudah final.</li>
+<li><input disabled="" type="checkbox"> Data <code>SHOWCASE</code> tidak ada yang <code>url</code>-nya masih placeholder.</li>
+<li><input disabled="" type="checkbox"> E-mail &amp; Instagram pada footer sudah benar.</li>
+<li><input disabled="" type="checkbox"> <code>$meta.title</code> / <code>$meta.description</code> sudah sesuai.</li>
+<li><input disabled="" type="checkbox"> Diuji di desktop &amp; mobile, dua tema &amp; dua bahasa.</li>
+</ul>
+<hr>
+<h2>5. Hasil Pengujian (Testing &amp; Validation)</h2>
+<p><strong>Metode:</strong> manual testing + inspeksi DOM pada halaman yang benar-benar dirender (live preview). Instrumentasi: menelusuri kelas CSS, <code>dataset</code>, <code>localStorage</code>, dan atribut <code>href</code> sebelum/sesudah interaksi.</p>
+<h3>5.1 Matriks Skenario Pengujian</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Modul</th>
+<th>Skenario</th>
+<th>Hasil yang Diharapkan</th>
+<th>Hasil</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TC-01</td>
+<td>M02 Tema</td>
+<td>Klik tombol tema dari kondisi awal</td>
+<td>Tema berganti espresso ↔ latte &amp; tersimpan</td>
+<td><code>data-theme</code> berubah <code>espresso → latte</code>, <code>localStorage.kw-theme = &quot;latte&quot;</code></td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-02</td>
+<td>M02 Tema</td>
+<td>Muat ulang halaman setelah ganti tema</td>
+<td>Tema terakhir tetap terpakai</td>
+<td>Skrip init membaca <code>localStorage</code> → tema bertahan</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-03</td>
+<td>M03 i18n</td>
+<td>Klik &quot;EN&quot;</td>
+<td>Seluruh teks <code>data-en</code> berganti ke Inggris</td>
+<td>100% elemen <code>[data-en]</code> berganti; mis. H1 → <em>&quot;Digital Presence for Your Coffee Shop&quot;</em></td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-04</td>
+<td>M03 i18n</td>
+<td>Klik &quot;ID&quot; setelah &quot;EN&quot;</td>
+<td>Seluruh teks kembali ke Indonesia</td>
+<td>Teks asli dipulihkan dari <code>dataset.orig</code>; H1 → <em>&quot;Digital Presence untuk Coffee Shop Anda&quot;</em></td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-05</td>
+<td>M03 i18n</td>
+<td>Ganti bahasa lalu <strong>muat ulang</strong> halaman</td>
+<td>Preferensi bahasa tersimpan</td>
+<td>Setelah reload, konten kembali ke <strong>Indonesia</strong> meski <code>kw-lang=&quot;en&quot;</code></td>
+<td><strong>FAIL → BUG-01</strong></td>
+</tr>
+<tr>
+<td>TC-06</td>
+<td>M05 WhatsApp</td>
+<td>Klik/inspeksi tiap tombol <code>[data-wa]</code> dalam mode ID &amp; EN</td>
+<td>7 tombol berisi deep-link + pesan sesuai bahasa</td>
+<td><code>href</code> = <code>wa.me/6281234567890?text=…</code>; pesan EN ter-encode benar</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-07</td>
+<td>M04 Katalog</td>
+<td>Muat halaman &amp; hitung kartu</td>
+<td>45 kartu ter-render dari data</td>
+<td>45 <code>.tpl-card</code> (14 <code>&lt;img&gt;</code> + 31 <code>&lt;iframe&gt;</code>)</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-08</td>
+<td>M04 Katalog</td>
+<td>Item tanpa <code>shot</code></td>
+<td>Fallback ke <code>&lt;iframe loading=&quot;lazy&quot;&gt;</code></td>
+<td>31 iframe ter-render</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-09</td>
+<td>M06 FAQ</td>
+<td>Klik pertanyaan ke-1 lalu ke-2</td>
+<td>Hanya satu jawaban terbuka pada satu waktu</td>
+<td><code>.faq-item.open</code> selalu maksimal 1</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-10</td>
+<td>M09 Responsif</td>
+<td>Viewport 390×844 (mobile)</td>
+<td>Navbar ringkas + hamburger menu</td>
+<td><code>.nav-links</code> tersembunyi, tombol hamburger tampil</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-11</td>
+<td>M09 Menu mobile</td>
+<td>Buka menu, lalu klik salah satu tautan</td>
+<td>Menu terbuka/tertutup dengan benar</td>
+<td><code>.open</code> bertambah saat diklik, dan hilang saat tautan diklik</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-12</td>
+<td>M09 Responsif</td>
+<td>Periksa overflow horizontal di 390×844 &amp; 1280×800</td>
+<td>Tidak ada scroll horizontal</td>
+<td><code>scrollWidth ≤ innerWidth</code> pada kedua ukuran</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-13</td>
+<td>M07 Animasi</td>
+<td>Pastikan library animasi termuat</td>
+<td><code>window.anime</code> tersedia</td>
+<td>anime.js <strong>4.0.0</strong> termuat dari CDN</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td>TC-14</td>
+<td>M10 Degradasi</td>
+<td>Baca kode jalur gagal animasi</td>
+<td>Halaman tetap tampil bila anime.js gagal / reduced-motion</td>
+<td>Blok animasi dibungkus <code>if (!window.anime) return;</code> + <code>prefers-reduced-motion</code> + <code>try/catch</code></td>
+<td><strong>PASS (verifikasi kode)</strong></td>
+</tr>
+<tr>
+<td>TC-15</td>
+<td>M08 Footer</td>
+<td>Ganti ke mode EN</td>
+<td>Tahun &amp; teks footer tetap utuh</td>
+<td>Elemen <code>#year</code> <strong>hilang</strong> karena <code>innerHTML</code> footer ditimpa versi EN</td>
+<td><strong>FAIL → BUG-02</strong></td>
+</tr>
+<tr>
+<td>TC-16</td>
+<td>Global</td>
+<td>Muat halaman &amp; periksa console</td>
+<td>Tidak ada error</td>
+<td>Tidak ada error runtime; hanya warning <code>snapdom</code> (dari alat uji, bukan aplikasi)</td>
+<td><strong>PASS</strong></td>
+</tr>
+</tbody></table>
+<h3>5.2 Ringkasan</h3>
+<ul>
+<li><strong>Total skenario:</strong> 16 — <strong>14 PASS</strong>, <strong>2 FAIL</strong> (keduanya <em>minor</em>, tidak memblokir fungsi utama).</li>
+<li>Seluruh fungsi inti (<strong>tema, i18n dalam satu sesi, CTA WhatsApp, katalog, FAQ, navigasi mobile</strong>) berjalan sesuai kriteria.</li>
+<li>Kedua kegagalan teridentifikasi sebagai bug kecil dan sudah dicatat di §6 beserta rekomendasi perbaikannya.</li>
+<li><strong>Belum ada unit test otomatis</strong> — pengujian masih manual (lihat §6 untuk rekomendasi).</li>
+</ul>
+<hr>
+<h2>6. Catatan Pengembangan Mendatang (Future Improvements / Known Bugs)</h2>
+<h3>6.1 Known Bugs (terverifikasi saat pengujian)</h3>
+<p><strong>BUG-01 — Preferensi bahasa tidak bertahan setelah halaman dimuat ulang</strong> <em>(severity: sedang)</em></p>
+<ul>
+<li><strong>Repro:</strong> klik <strong>EN</strong> → muat ulang halaman → konten kembali ke Bahasa Indonesia, walaupun <code>localStorage[&quot;kw-lang&quot;] === &quot;en&quot;</code>.</li>
+<li><strong>Penyebab:</strong> skrip init menetapkan <code>document.documentElement.lang</code> (atribut <code>lang</code>), sedangkan fungsi <code>lang()</code> membaca <code>document.documentElement.dataset.lang</code> (atribut <code>data-lang</code>) yang <strong>tidak pernah diisi saat init</strong>. Jadi nilai tersimpan tidak pernah diterapkan.</li>
+<li><strong>Efek samping:</strong> saat kondisi ini terjadi, atribut <code>&lt;html lang=&quot;en&quot;&gt;</code> tidak sesuai dengan isi yang berbahasa Indonesia (masalah aksesibilitas/SEO).</li>
+<li><strong>Rekomendasi perbaikan:</strong> pada skrip init, set juga <code>document.documentElement.dataset.lang = localStorage.getItem(&quot;kw-lang&quot;) || &quot;id&quot;</code>, dan di dalam <code>setLang()</code> perbarui <code>document.documentElement.lang = l</code> agar atribut bahasa sinkron dengan konten.</li>
+</ul>
+<p><strong>BUG-02 — Elemen tahun (<code>#year</code>) hilang saat mode English</strong> <em>(severity: rendah)</em></p>
+<ul>
+<li><strong>Repro:</strong> klik <strong>EN</strong> → <code>document.getElementById(&quot;year&quot;)</code> menjadi <code>null</code>; setelah kembali ke <strong>ID</strong> elemen muncul lagi.</li>
+<li><strong>Penyebab:</strong> <code>applyI18n()</code> mengganti <code>innerHTML</code> elemen footer dengan versi <code>data-en</code> yang tidak memuat <code>&lt;span id=&quot;year&quot;&gt;</code> bersarang.</li>
+<li><strong>Efek:</strong> tahun pada footer hilang selama mode EN (teks tahun masih tampil dari string EN, tetapi node <code>#year</code> hilang).</li>
+<li><strong>Rekomendasi perbaikan:</strong> jangan letakkan markup bersarang di dalam elemen yang punya <code>data-en</code> (pisahkan <code>#year</code> ke elemen tetangga), atau ubah <code>applyI18n()</code> agar mengganti <code>textContent</code> untuk elemen beranak, bukan <code>innerHTML</code>.</li>
+</ul>
+<p><strong>BUG-03 — Jawaban FAQ panjang berpotensi terpotong</strong> <em>(severity: rendah, potensial)</em></p>
+<ul>
+<li><code>max-height: 340px</code> pada <code>.faq-a</code> bersifat tetap; jawaban yang lebih tinggi dari itu akan terpotong pada layar kecil.</li>
+<li><strong>Rekomendasi:</strong> ganti dengan <code>max-height</code> dinamis (<code>el.scrollHeight + &quot;px&quot;</code>) atau <code>grid-template-rows: 0fr → 1fr</code>.</li>
+</ul>
+<h3>6.2 Fitur yang Belum Dikembangkan (Backlog / Ide Lanjutan)</h3>
+<table>
+<thead>
+<tr>
+<th>Prioritas</th>
+<th>Item</th>
+<th>Manfaat</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tinggi</td>
+<td><strong>Migrasi data <code>SHOWCASE</code> ke sumber eksternal</strong> (JSON statis, <code>kv-plugin</code>, atau headless CMS)</td>
+<td>Menambah template tanpa mengubah kode; memisahkan data dari tampilan</td>
+</tr>
+<tr>
+<td>Tinggi</td>
+<td><strong>Perbaikan BUG-01 &amp; BUG-02</strong></td>
+<td>Konsistensi preferensi pengguna &amp; kualitas aksesibilitas</td>
+</tr>
+<tr>
+<td>Tinggi</td>
+<td><strong>Tambah <code>$meta.image</code></strong> (social share card)</td>
+<td>Tampilan lebih menarik di listing Perchance &amp; saat dibagikan</td>
+</tr>
+<tr>
+<td>Sedang</td>
+<td><strong>Form lead capture ringan</strong> (nama, nomor WA, jenis usaha) + penyimpanan (mis. <code>kv-plugin</code>/<code>localStorage</code>)</td>
+<td>Mengukur jumlah leads, tidak hanya mengandalkan chat</td>
+</tr>
+<tr>
+<td>Sedang</td>
+<td><strong>Analitik</strong> (mis. counter klik CTA per template)</td>
+<td>Data untuk mengevaluasi CTA &amp; template terpopuler</td>
+</tr>
+<tr>
+<td>Sedang</td>
+<td><strong>Lazy-loading &amp; optimasi gambar screenshot</strong> (<code>loading=&quot;lazy&quot;</code>, <code>width/height</code>, format WebP)</td>
+<td>Mempercepat waktu muat, terutama di jaringan lambat</td>
+</tr>
+<tr>
+<td>Sedang</td>
+<td><strong>Structured data LocalBusiness + sitemap</strong></td>
+<td>SEO lokal lebih optimal</td>
+</tr>
+<tr>
+<td>Rendah</td>
+<td><strong>Pencarian/filter katalog</strong> (berdasarkan tag/kategori)</td>
+<td>Usability saat jumlah template bertambah besar</td>
+</tr>
+<tr>
+<td>Rendah</td>
+<td><strong>PWA / offline cache</strong></td>
+<td>Pengalaman lebih baik di koneksi buruk</td>
+</tr>
+<tr>
+<td>Rendah</td>
+<td><strong>Unit/E2E test otomatis</strong> (mis. Playwright/Vitest) + CI (GitHub Actions)</td>
+<td>Regresi terdeteksi otomatis; kualitas lebih terjamin</td>
+</tr>
+<tr>
+<td>Rendah</td>
+<td><strong>Mode konten dinamis per-bahasa</strong> untuk <code>tags</code>/<code>desc</code> yang belum punya varian ID/EN</td>
+<td>Cakupan terjemahan penuh</td>
+</tr>
+<tr>
+<td>Rendah</td>
+<td><strong>Aksesibilitas lanjutan</strong> (fokus-visible konsisten, <code>aria-expanded</code> pada FAQ/hamburger, kontras teks)</td>
+<td>Sesuai WCAG AA</td>
+</tr>
+</tbody></table>
+<h3>6.3 Catatan untuk Developer Berikutnya</h3>
+<ol>
+<li><strong>Satu sumber kebenaran:</strong> semua logika ada di <code>index.html</code>; <code>main.pjs</code> hanya metadata. Mulai membaca dari <code>&lt;script&gt;</code> terakhir di <code>index.html</code> (mendefinisikan <code>SHOWCASE</code>, i18n, tema, katalog).</li>
+<li><strong>Menambah template cukup mengedit <code>SHOWCASE</code></strong> — tidak ada bagian lain yang perlu diubah.</li>
+<li><strong>Jangan menaruh rahasia apa pun</strong> di <code>index.html</code>/<code>main.pjs</code>: seluruh isinya publik.</li>
+<li>Perhatikan urutan eksekusi: Perchance merender seluruh template <code>main.pjs</code> <strong>sebelum</strong> <code>&lt;script&gt;</code> di <code>index.html</code> dijalankan.</li>
+<li>Saat mengubah teks dwibahasa, selalu sediakan pasangan <code>data-en</code>/teks asli <strong>dan</strong> varian <code>{id,en}</code> untuk konten dinamis (<code>SHOWCASE</code>, <code>WA_MSG</code>).</li>
+</ol>
+<hr>
+<h2>Lampiran</h2>
+<h3>A. Referensi Berkas &amp; Titik Kode Penting</h3>
+<table>
+<thead>
+<tr>
+<th>Bagian</th>
+<th>Lokasi</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Metadata SEO</td>
+<td><code>main.pjs</code> → blok <code>$meta</code></td>
+</tr>
+<tr>
+<td>Tema (variabel CSS)</td>
+<td><code>index.html</code> → <code>html[data-theme=&quot;espresso&quot;]</code>, <code>html[data-theme=&quot;latte&quot;]</code></td>
+</tr>
+<tr>
+<td>Data katalog</td>
+<td><code>index.html</code> → <code>const SHOWCASE = [...]</code></td>
+</tr>
+<tr>
+<td>Nomor &amp; pesan WhatsApp</td>
+<td><code>index.html</code> → <code>const WA_NUMBER</code>, <code>const WA_MSG</code></td>
+</tr>
+<tr>
+<td>Fungsi i18n</td>
+<td><code>index.html</code> → <code>lang()</code>, <code>T()</code>, <code>applyI18n()</code>, <code>setLang()</code></td>
+</tr>
+<tr>
+<td>Render katalog</td>
+<td><code>index.html</code> → <code>renderShowcase()</code>, <code>perchanceShot()</code></td>
+</tr>
+<tr>
+<td>Tema</td>
+<td><code>index.html</code> → <code>setTheme()</code></td>
+</tr>
+<tr>
+<td>Animasi</td>
+<td><code>index.html</code> → blok <code>&lt;script&gt;</code> anime.js (<code>heroEntrance</code>, <code>heroAmbient</code>, <code>window.__kwReveal</code>)</td>
+</tr>
+<tr>
+<td>Responsif</td>
+<td><code>index.html</code> → <code>@media (max-width:1080px/1000px/760px)</code></td>
+</tr>
+</tbody></table>
+<h3>B. Daftar Katalog Template (45 item)</h3>
+<blockquote>
+<p>Isi kolom terakhir sesuai peran Anda dalam KP (mis. &quot;Dibuat&quot;, &quot;Screenshot&quot;, &quot;Tidak terkait&quot;).</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Nama</th>
+<th>URL</th>
+<th>Platform</th>
+<th>Dikerjakan oleh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Kape RPG</td>
+<td><a href="https://perchance.org/kape-rpg#/">https://perchance.org/kape-rpg#/</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Djawa Kape</td>
+<td><a href="https://perchance.org/djawa-kape#/home">https://perchance.org/djawa-kape#/home</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Neon Kape</td>
+<td><a href="https://perchance.org/neon-kape#/">https://perchance.org/neon-kape#/</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Pixel Cafe</td>
+<td><a href="https://perchance.org/pixel-cafe#/">https://perchance.org/pixel-cafe#/</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nusantara Kape</td>
+<td><a href="https://perchance.org/nusantara-kape#/">https://perchance.org/nusantara-kape#/</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Luma Kape</td>
+<td><a href="https://perchance.org/luma-kape#/home">https://perchance.org/luma-kape#/home</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Kuro Kape</td>
+<td><a href="https://perchance.org/kuro-kape#/">https://perchance.org/kuro-kape#/</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Roastry Kape</td>
+<td><a href="https://perchance.org/roastry-kape#/">https://perchance.org/roastry-kape#/</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Mareblu Kape</td>
+<td><a href="https://perchance.org/mareblu-kape#/">https://perchance.org/mareblu-kape#/</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Noir Kape</td>
+<td><a href="https://perchance.org/noir-kape#/story">https://perchance.org/noir-kape#/story</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Ambara Coffee</td>
+<td><a href="https://perchance.org/ambara-coffe#/">https://perchance.org/ambara-coffe#/</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Kopi Arsa</td>
+<td><a href="https://perchance.org/kopi-arsa#/home">https://perchance.org/kopi-arsa#/home</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>13</td>
+<td>Kopi Kenangan</td>
+<td><a href="https://perchance.org/kopi-kenangan#/">https://perchance.org/kopi-kenangan#/</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Larik</td>
+<td><a href="https://perchance.org/larik#/">https://perchance.org/larik#/</a></td>
+<td>Perchance</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Pure Brew Co.</td>
+<td><a href="https://pure-brew-co.vercel.app/">https://pure-brew-co.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Aroma Co.</td>
+<td><a href="https://aroma-co-nine.vercel.app/">https://aroma-co-nine.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>17</td>
+<td>Terracotta ID</td>
+<td><a href="https://terracotta-id.vercel.app/">https://terracotta-id.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>18</td>
+<td>Brew Pilot</td>
+<td><a href="https://brew-pilot.vercel.app/">https://brew-pilot.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>19</td>
+<td>NØRVA Coffee</td>
+<td><a href="https://norva-coffe.vercel.app/">https://norva-coffe.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>20</td>
+<td>KRØMA Coffee Roasters</td>
+<td><a href="https://kroma-xt8r.vercel.app/">https://kroma-xt8r.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>21</td>
+<td>Aether Coffee Lab</td>
+<td><a href="https://cofffu.vercel.app/">https://cofffu.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>22</td>
+<td>Aethel</td>
+<td><a href="https://authall.vercel.app/">https://authall.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>23</td>
+<td>Aether Coffee Architecture</td>
+<td><a href="https://kofai.vercel.app/">https://kofai.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>24</td>
+<td>Kairos Coffee</td>
+<td><a href="https://cofffx1.vercel.app/">https://cofffx1.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>25</td>
+<td>Aether Grain</td>
+<td><a href="https://coffx2.vercel.app/">https://coffx2.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>26</td>
+<td>Aether Noir</td>
+<td><a href="https://coffx3.vercel.app/">https://coffx3.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>27</td>
+<td>Aethera</td>
+<td><a href="https://coffx4.vercel.app/">https://coffx4.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>28</td>
+<td>Aetheria</td>
+<td><a href="https://coffx5.vercel.app/">https://coffx5.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>29</td>
+<td>Aurelia Coffee</td>
+<td><a href="https://cofffx6.vercel.app/">https://cofffx6.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>30</td>
+<td>Valence</td>
+<td><a href="https://coffx7.vercel.app/">https://coffx7.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>31</td>
+<td>VØID Coffee Maison</td>
+<td><a href="https://cofffx8.vercel.app/">https://cofffx8.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>32</td>
+<td>Kyber</td>
+<td><a href="https://cofffx9.vercel.app/">https://cofffx9.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>33</td>
+<td>Atelier VØID</td>
+<td><a href="https://cofffx10.vercel.app/">https://cofffx10.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>34</td>
+<td>Coffee Shop Template 1</td>
+<td><a href="https://tugas-template-coffee-shop.vercel.app/">https://tugas-template-coffee-shop.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>35</td>
+<td>Coffee Shop Template 2</td>
+<td><a href="https://tugas-template-coffee-shop-5lgq.vercel.app/">https://tugas-template-coffee-shop-5lgq.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>36</td>
+<td>Coffee Shop Template 3</td>
+<td><a href="https://tugas-template-coffee-shop-rfa2.vercel.app/">https://tugas-template-coffee-shop-rfa2.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>37</td>
+<td>Coffee Shop Template 4</td>
+<td><a href="https://tugas-template-coffee-shop-wlca.vercel.app/">https://tugas-template-coffee-shop-wlca.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>38</td>
+<td>Coffee Shop Template 5</td>
+<td><a href="https://tugas-template-coffee-shop-6luf.vercel.app/">https://tugas-template-coffee-shop-6luf.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>39</td>
+<td>Coffee Shop Template 6</td>
+<td><a href="https://tugas-template-coffee-shop-ekwj.vercel.app/">https://tugas-template-coffee-shop-ekwj.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>40</td>
+<td>Coffee Shop Template 7</td>
+<td><a href="https://tugas-template-coffee-shop-jwvg.vercel.app/">https://tugas-template-coffee-shop-jwvg.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>41</td>
+<td>Coffee Shop Template 8</td>
+<td><a href="https://tugas-template-coffee-shop-lqcd.vercel.app/">https://tugas-template-coffee-shop-lqcd.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>42</td>
+<td>Coffee Shop Template 9</td>
+<td><a href="https://tugas-template-coffee-shop-4fig.vercel.app/">https://tugas-template-coffee-shop-4fig.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>43</td>
+<td>Coffee Shop Template 10</td>
+<td><a href="https://tugas-template-coffee-shop-kqpu.vercel.app/">https://tugas-template-coffee-shop-kqpu.vercel.app/</a></td>
+<td>Vercel</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>44</td>
+<td>Slowpour</td>
+<td><a href="https://fadhlurr01.github.io/Slowpour/">https://fadhlurr01.github.io/Slowpour/</a></td>
+<td>GitHub Pages</td>
+<td><code>[ISI]</code></td>
+</tr>
+<tr>
+<td>45</td>
+<td>Maison Seruni</td>
+<td><a href="https://fadhlurr01.github.io/Maison-Seruni/">https://fadhlurr01.github.io/Maison-Seruni/</a></td>
+<td>GitHub Pages</td>
+<td><code>[ISI]</code></td>
+</tr>
+</tbody></table>
+<h3>C. Daftar Gambar (Screenshot)</h3>
+<table>
+<thead>
+<tr>
+<th>Gambar</th>
+<th>Berkas</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Gambar 1</td>
+<td><code>data:image/png;base64,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</code></td>
+<td>Tampilan hero halaman KopiWeb (desktop)</td>
+</tr>
+<tr>
+<td>Gambar 2</td>
+<td><code>data:image/png;base64,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</code></td>
+<td>Tampilan hero pada mobile (390×844 px)</td>
+</tr>
+</tbody></table>
+<p><strong>Gambar 1 — Tampilan hero (desktop)</strong></p>
+<p><img src="data:image/png;base64,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" alt="Gambar 1 — Tampilan hero KopiWeb (desktop)"></p>
+<p><strong>Gambar 2 — Tampilan hero (mobile 390×844 px)</strong></p>
+<p><img src="data:image/png;base64,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" alt="Gambar 2 — Tampilan hero pada mobile"></p>
+<h3>D. Glosarium</h3>
+<table>
+<thead>
+<tr>
+<th>Istilah</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Perchance</strong></td>
+<td>Platform hosting generator/website statis; menyediakan editor + live preview</td>
+</tr>
+<tr>
+<td><strong><code>main.pjs</code></strong></td>
+<td>Berkas kode Perchance: metadata <code>$meta</code> dan/atau daftar konten</td>
+</tr>
+<tr>
+<td><strong>Single-page</strong></td>
+<td>Aplikasi web yang seluruh kontennya ada pada satu halaman &amp; bernavigasi via anchor</td>
+</tr>
+<tr>
+<td><strong>Deep-link WhatsApp</strong></td>
+<td>URL <code>wa.me/&lt;nomor&gt;?text=…</code> untuk membuka chat dengan pesan terisi otomatis</td>
+</tr>
+<tr>
+<td><strong>i18n</strong></td>
+<td>Internationalization — dukungan banyak bahasa</td>
+</tr>
+<tr>
+<td><strong>Graceful degradation</strong></td>
+<td>Halaman tetap berfungsi normal saat fitur opsional (animasi) gagal dimuat</td>
+</tr>
+<tr>
+<td><strong>Zero-build</strong></td>
+<td>Tidak memerlukan proses kompilasi/bundling sebelum dijalankan</td>
+</tr>
+</tbody></table>
+
+</main></body></html>

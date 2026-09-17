@@ -1,0 +1,21 @@
+{
+  "name": "kopiweb-fullstack",
+  "version": "1.0.0",
+  "description": "Website Pemasaran & Katalog Jasa Pembuatan Website Coffee Shop (Fullstack with cPanel Deploy)",
+  "main": "index.html",
+  "scripts": {
+    "dev": "php -S localhost:8000",
+    "build": "node build.js",
+    "test": "php scratch/test_db.php"
+  },
+  "keywords": [
+    "coffee-shop",
+    "website",
+    "fullstack",
+    "cpanel",
+    "portfolio",
+    "optibis"
+  ],
+  "author": "Optibis / KopiWeb Team",
+  "license": "MIT"
+}

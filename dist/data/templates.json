@@ -1,0 +1,703 @@
+[
+  {
+    "name": {
+      "id": "Kape RPG",
+      "en": "Kape RPG"
+    },
+    "url": "https://perchance.org/kape-rpg#/",
+    "shot": "https://user.uploads.dev/file/bc068409fdb96cfd83e4486cc31f9d4d.jpg",
+    "tags": [
+      "RPG",
+      "Game",
+      "Kreatif"
+    ],
+    "desc": {
+      "id": "Website kopi bergaya RPG/interaktif.",
+      "en": "RPG-style interactive coffee website."
+    }
+  },
+  {
+    "name": {
+      "id": "Djawa Kape",
+      "en": "Djawa Kape"
+    },
+    "url": "https://perchance.org/djawa-kape#/home",
+    "shot": "https://user.uploads.dev/file/595b02e8166438b19bfcec388f0a430e.jpg",
+    "tags": [
+      "Company Profile",
+      "Jawa",
+      "Tradisional"
+    ],
+    "desc": {
+      "id": "Profil coffee shop bernuansa Jawa.",
+      "en": "Javanese-themed coffee shop profile."
+    }
+  },
+  {
+    "name": {
+      "id": "Neon Kape",
+      "en": "Neon Kape"
+    },
+    "url": "https://perchance.org/neon-kape#/",
+    "shot": "https://user.uploads.dev/file/b2a4cdae318da236dbcec0ca521c6051.jpg",
+    "tags": [
+      "Neon",
+      "Modern",
+      "Nightlife"
+    ],
+    "desc": {
+      "id": "Tampilan neon energik untuk coffee shop.",
+      "en": "Energetic neon look for a coffee shop."
+    }
+  },
+  {
+    "name": {
+      "id": "Pixel Cafe",
+      "en": "Pixel Cafe"
+    },
+    "url": "https://perchance.org/pixel-cafe#/",
+    "shot": "https://user.uploads.dev/file/b365c8d19a9f4d67aaa8465427da52f2.jpg",
+    "tags": [
+      "Pixel Art",
+      "Retro",
+      "Unik"
+    ],
+    "desc": {
+      "id": "Gaya pixel art yang playful dan retro.",
+      "en": "Playful retro pixel-art style."
+    }
+  },
+  {
+    "name": {
+      "id": "Nusantara Kape",
+      "en": "Nusantara Kape"
+    },
+    "url": "https://perchance.org/nusantara-kape#/",
+    "shot": "https://user.uploads.dev/file/ebe5d03ebde6f3a4ae0c564daf18879e.jpg",
+    "tags": [
+      "Nusantara",
+      "Branding"
+    ],
+    "desc": {
+      "id": "Identitas Nusantara di tiap halaman.",
+      "en": "Nusantara identity on every page."
+    }
+  },
+  {
+    "name": {
+      "id": "Luma Kape",
+      "en": "Luma Kape"
+    },
+    "url": "https://perchance.org/luma-kape#/home",
+    "shot": "https://user.uploads.dev/file/4fbf9df0e363dbea412ecc1641a323de.jpg",
+    "tags": [
+      "Cerah",
+      "Minimalis"
+    ],
+    "desc": {
+      "id": "Desain cerah dan bersih, fokus ke menu.",
+      "en": "Bright, clean design focused on the menu."
+    }
+  },
+  {
+    "name": {
+      "id": "Kuro Kape",
+      "en": "Kuro Kape"
+    },
+    "url": "https://perchance.org/kuro-kape#/",
+    "shot": "https://user.uploads.dev/file/518c7e22a4ed81175d093cd8cf9c392c.jpg",
+    "tags": [
+      "Dark",
+      "Minimalis",
+      "Elegant"
+    ],
+    "desc": {
+      "id": "Tema gelap elegan untuk brand premium.",
+      "en": "Elegant dark theme for a premium brand."
+    }
+  },
+  {
+    "name": {
+      "id": "Roastry Kape",
+      "en": "Roastry Kape"
+    },
+    "url": "https://perchance.org/roastry-kape#/",
+    "shot": "https://user.uploads.dev/file/729eee7e6054be454164e8bf68d41551.jpg",
+    "tags": [
+      "Roastery",
+      "Company Profile"
+    ],
+    "desc": {
+      "id": "Website untuk roastery dan kafe.",
+      "en": "Website for a roastery and cafe."
+    }
+  },
+  {
+    "name": {
+      "id": "Mareblu Kape",
+      "en": "Mareblu Kape"
+    },
+    "url": "https://perchance.org/mareblu-kape#/",
+    "shot": "https://user.uploads.dev/file/21038faedddd625d5d38bcb4f4b2b419.jpg",
+    "tags": [
+      "Pantai",
+      "Segar",
+      "Santai"
+    ],
+    "desc": {
+      "id": "Nuansa pesisir yang segar dan santai.",
+      "en": "Fresh, relaxed coastal vibes."
+    }
+  },
+  {
+    "name": {
+      "id": "Noir Kape",
+      "en": "Noir Kape"
+    },
+    "url": "https://perchance.org/noir-kape#/story",
+    "shot": "https://user.uploads.dev/file/544e2f98ac2faf835980dd484b348b51.jpg",
+    "tags": [
+      "Dark",
+      "Story",
+      "Cinematic"
+    ],
+    "desc": {
+      "id": "Tema noir sinematik untuk brand unik.",
+      "en": "Cinematic noir theme for a unique brand."
+    }
+  },
+  {
+    "name": {
+      "id": "Pure Brew Co.",
+      "en": "Pure Brew Co."
+    },
+    "url": "https://pure-brew-co.vercel.app/",
+    "tags": [
+      "Premium",
+      "Company Profile"
+    ],
+    "desc": {
+      "id": "Kesan premium untuk specialty coffee.",
+      "en": "Premium look for specialty coffee."
+    }
+  },
+  {
+    "name": {
+      "id": "Aroma Co.",
+      "en": "Aroma Co."
+    },
+    "url": "https://aroma-co-nine.vercel.app/",
+    "tags": [
+      "Modern",
+      "Warm"
+    ],
+    "desc": {
+      "id": "Modern dan hangat, menonjolkan aroma.",
+      "en": "Warm modern design highlighting aroma."
+    }
+  },
+  {
+    "name": {
+      "id": "Terracotta ID",
+      "en": "Terracotta ID"
+    },
+    "url": "https://terracotta-id.vercel.app/",
+    "tags": [
+      "Terracotta",
+      "Warm",
+      "Warna Tanah"
+    ],
+    "desc": {
+      "id": "Palet terracotta yang hangat dan natural.",
+      "en": "Warm, natural terracotta palette."
+    }
+  },
+  {
+    "name": {
+      "id": "Brew Pilot",
+      "en": "Brew Pilot"
+    },
+    "url": "https://brew-pilot.vercel.app/",
+    "tags": [
+      "Brewing",
+      "Guide"
+    ],
+    "desc": {
+      "id": "Situs panduan & menu bernuansa pilot.",
+      "en": "Brewing guide & menu with a pilot twist."
+    }
+  },
+  {
+    "name": {
+      "id": "Slowpour",
+      "en": "Slowpour"
+    },
+    "url": "https://fadhlurr01.github.io/Slowpour/",
+    "tags": [
+      "Slow Bar",
+      "Minimalis"
+    ],
+    "desc": {
+      "id": "Slow bar minimalis, fokus pada ritual seduh.",
+      "en": "Minimalist slow bar focused on the brewing ritual."
+    }
+  },
+  {
+    "name": {
+      "id": "Maison Seruni",
+      "en": "Maison Seruni"
+    },
+    "url": "https://fadhlurr01.github.io/Maison-Seruni/",
+    "tags": [
+      "Elegant",
+      "Homey"
+    ],
+    "desc": {
+      "id": "Elegant dan hangat seperti rumah.",
+      "en": "Elegant and as warm as home."
+    }
+  },
+  {
+    "name": {
+      "id": "Ambara Coffee",
+      "en": "Ambara Coffee"
+    },
+    "url": "https://perchance.org/ambara-coffe#/",
+    "shot": "https://user.uploads.dev/file/202ceb6b4e1f64cc73a54741bab73cf7.jpg",
+    "tags": [
+      "Company Profile"
+    ],
+    "desc": {
+      "id": "Profil coffee shop yang profesional.",
+      "en": "A professional coffee shop profile."
+    }
+  },
+  {
+    "name": {
+      "id": "Kopi Arsa",
+      "en": "Kopi Arsa"
+    },
+    "url": "https://perchance.org/kopi-arsa#/home",
+    "shot": "https://user.uploads.dev/file/3e171c3bbe85b27fc8648a274613d60f.jpg",
+    "tags": [
+      "Nusantara",
+      "Branding"
+    ],
+    "desc": {
+      "id": "Branding kopi lokal yang berkarakter.",
+      "en": "Characterful local coffee branding."
+    }
+  },
+  {
+    "name": {
+      "id": "Kopi Kenangan",
+      "en": "Kopi Kenangan"
+    },
+    "url": "https://perchance.org/kopi-kenangan#/",
+    "shot": "https://user.uploads.dev/file/b802b30a5623c9331b5a3854dd9403ea.jpg",
+    "tags": [
+      "Branding",
+      "Story"
+    ],
+    "desc": {
+      "id": "Cerita brand dengan sentuhan nostalgia.",
+      "en": "Brand story with a nostalgic touch."
+    }
+  },
+  {
+    "name": {
+      "id": "Larik",
+      "en": "Larik"
+    },
+    "url": "https://perchance.org/larik#/",
+    "shot": "https://user.uploads.dev/file/881eda5b2b226c39c32f6872fcae6a12.jpg",
+    "tags": [
+      "Minimalis",
+      "Typography"
+    ],
+    "desc": {
+      "id": "Tipografi berani dengan layout bersih.",
+      "en": "Bold typography with a clean layout."
+    }
+  },
+  {
+    "name": {
+      "id": "Coffee Shop Template 1",
+      "en": "Coffee Shop Template 1"
+    },
+    "url": "https://tugas-template-coffee-shop.vercel.app/",
+    "tags": [
+      "Landing Page"
+    ],
+    "desc": {
+      "id": "Template website coffee shop siap pakai.",
+      "en": "Ready-to-use coffee shop website template."
+    }
+  },
+  {
+    "name": {
+      "id": "Coffee Shop Template 2",
+      "en": "Coffee Shop Template 2"
+    },
+    "url": "https://tugas-template-coffee-shop-5lgq.vercel.app/",
+    "tags": [
+      "Company Profile"
+    ],
+    "desc": {
+      "id": "Template website coffee shop siap pakai.",
+      "en": "Ready-to-use coffee shop website template."
+    }
+  },
+  {
+    "name": {
+      "id": "Coffee Shop Template 3",
+      "en": "Coffee Shop Template 3"
+    },
+    "url": "https://tugas-template-coffee-shop-rfa2.vercel.app/",
+    "tags": [
+      "Menu Digital"
+    ],
+    "desc": {
+      "id": "Template website coffee shop siap pakai.",
+      "en": "Ready-to-use coffee shop website template."
+    }
+  },
+  {
+    "name": {
+      "id": "Coffee Shop Template 4",
+      "en": "Coffee Shop Template 4"
+    },
+    "url": "https://tugas-template-coffee-shop-wlca.vercel.app/",
+    "tags": [
+      "Promo"
+    ],
+    "desc": {
+      "id": "Template website coffee shop siap pakai.",
+      "en": "Ready-to-use coffee shop website template."
+    }
+  },
+  {
+    "name": {
+      "id": "Coffee Shop Template 5",
+      "en": "Coffee Shop Template 5"
+    },
+    "url": "https://tugas-template-coffee-shop-6luf.vercel.app/",
+    "tags": [
+      "Event"
+    ],
+    "desc": {
+      "id": "Template website coffee shop siap pakai.",
+      "en": "Ready-to-use coffee shop website template."
+    }
+  },
+  {
+    "name": {
+      "id": "Coffee Shop Template 6",
+      "en": "Coffee Shop Template 6"
+    },
+    "url": "https://tugas-template-coffee-shop-ekwj.vercel.app/",
+    "tags": [
+      "Branding"
+    ],
+    "desc": {
+      "id": "Template website coffee shop siap pakai.",
+      "en": "Ready-to-use coffee shop website template."
+    }
+  },
+  {
+    "name": {
+      "id": "Coffee Shop Template 7",
+      "en": "Coffee Shop Template 7"
+    },
+    "url": "https://tugas-template-coffee-shop-jwvg.vercel.app/",
+    "tags": [
+      "Order Online"
+    ],
+    "desc": {
+      "id": "Template website coffee shop siap pakai.",
+      "en": "Ready-to-use coffee shop website template."
+    }
+  },
+  {
+    "name": {
+      "id": "Coffee Shop Template 8",
+      "en": "Coffee Shop Template 8"
+    },
+    "url": "https://tugas-template-coffee-shop-lqcd.vercel.app/",
+    "tags": [
+      "Gallery"
+    ],
+    "desc": {
+      "id": "Template website coffee shop siap pakai.",
+      "en": "Ready-to-use coffee shop website template."
+    }
+  },
+  {
+    "name": {
+      "id": "Coffee Shop Template 9",
+      "en": "Coffee Shop Template 9"
+    },
+    "url": "https://tugas-template-coffee-shop-4fig.vercel.app/",
+    "tags": [
+      "Seasonal"
+    ],
+    "desc": {
+      "id": "Template website coffee shop siap pakai.",
+      "en": "Ready-to-use coffee shop website template."
+    }
+  },
+  {
+    "name": {
+      "id": "Coffee Shop Template 10",
+      "en": "Coffee Shop Template 10"
+    },
+    "url": "https://tugas-template-coffee-shop-kqpu.vercel.app/",
+    "tags": [
+      "Custom"
+    ],
+    "desc": {
+      "id": "Template website coffee shop siap pakai.",
+      "en": "Ready-to-use coffee shop website template."
+    }
+  },
+  {
+    "name": {
+      "id": "NØRVA Coffee",
+      "en": "NØRVA Coffee"
+    },
+    "url": "https://norva-coffe.vercel.app/",
+    "tags": [
+      "Premium",
+      "Editorial",
+      "Specialty"
+    ],
+    "desc": {
+      "id": "Quiet luxury untuk specialty coffee, nuansa tenang dan mewah.",
+      "en": "Quiet-luxury take on specialty coffee — calm and refined."
+    }
+  },
+  {
+    "name": {
+      "id": "KRØMA Coffee Roasters",
+      "en": "KRØMA Coffee Roasters"
+    },
+    "url": "https://kroma-xt8r.vercel.app/",
+    "tags": [
+      "Roastery",
+      "Modern",
+      "Single Origin"
+    ],
+    "desc": {
+      "id": "Roastery modern yang presisi, fokus single-origin.",
+      "en": "Precision modern roastery focused on single-origin."
+    }
+  },
+  {
+    "name": {
+      "id": "Aether Coffee Lab",
+      "en": "Aether Coffee Lab"
+    },
+    "url": "https://cofffu.vercel.app/",
+    "tags": [
+      "Dark",
+      "Futuristik",
+      "Roastery"
+    ],
+    "desc": {
+      "id": "Sensory roastery avant-garde bergaya gelap futuristik.",
+      "en": "Avant-garde sensory roastery in a futuristic dark style."
+    }
+  },
+  {
+    "name": {
+      "id": "Aethel",
+      "en": "Aethel"
+    },
+    "url": "https://authall.vercel.app/",
+    "tags": [
+      "Luxury",
+      "Dark",
+      "Gold"
+    ],
+    "desc": {
+      "id": "Atelier kopi mewah dengan aksen emas celestial.",
+      "en": "Luxury coffee atelier with celestial gold accents."
+    }
+  },
+  {
+    "name": {
+      "id": "Aether Coffee Architecture",
+      "en": "Aether Coffee Architecture"
+    },
+    "url": "https://kofai.vercel.app/",
+    "tags": [
+      "Architecture",
+      "Dark",
+      "Eksperimental"
+    ],
+    "desc": {
+      "id": "Arsitektur kopi eksperimental dengan nuansa gelap.",
+      "en": "Experimental coffee architecture in a dark palette."
+    }
+  },
+  {
+    "name": {
+      "id": "Kairos Coffee",
+      "en": "Kairos Coffee"
+    },
+    "url": "https://cofffx1.vercel.app/",
+    "tags": [
+      "Luxury",
+      "Dark",
+      "Rare Origin"
+    ],
+    "desc": {
+      "id": "Dark luxury dengan kesan rare origin yang eksklusif.",
+      "en": "Dark luxury look with an exclusive rare-origin feel."
+    }
+  },
+  {
+    "name": {
+      "id": "Aether Grain",
+      "en": "Aether Grain"
+    },
+    "url": "https://coffx2.vercel.app/",
+    "tags": [
+      "Premium",
+      "Eksperimental",
+      "Haute"
+    ],
+    "desc": {
+      "id": "Atelier eksperimental ultra-premium ala haute gastronomy.",
+      "en": "Ultra-premium experimental atelier with a haute-gastronomy feel."
+    }
+  },
+  {
+    "name": {
+      "id": "Aether Noir",
+      "en": "Aether Noir"
+    },
+    "url": "https://coffx3.vercel.app/",
+    "tags": [
+      "Noir",
+      "Dark",
+      "Architecture"
+    ],
+    "desc": {
+      "id": "Arsitektur kopi noir yang dramatis dan elegan.",
+      "en": "Dramatic, elegant noir coffee architecture."
+    }
+  },
+  {
+    "name": {
+      "id": "Aethera",
+      "en": "Aethera"
+    },
+    "url": "https://coffx4.vercel.app/",
+    "tags": [
+      "Futuristik",
+      "Minimalis",
+      "Warm"
+    ],
+    "desc": {
+      "id": "Atelier futuristik minimalis dengan palet hangat.",
+      "en": "Minimalist futuristic atelier in a warm palette."
+    }
+  },
+  {
+    "name": {
+      "id": "Aetheria",
+      "en": "Aetheria"
+    },
+    "url": "https://coffx5.vercel.app/",
+    "tags": [
+      "Modern",
+      "Architecture",
+      "Premium"
+    ],
+    "desc": {
+      "id": "Specialty coffee modern berarsitektur, terasa mewah.",
+      "en": "Modern architectural specialty coffee with a luxe feel."
+    }
+  },
+  {
+    "name": {
+      "id": "Aurelia Coffee",
+      "en": "Aurelia Coffee"
+    },
+    "url": "https://cofffx6.vercel.app/",
+    "tags": [
+      "Roastery",
+      "Warm",
+      "Guide"
+    ],
+    "desc": {
+      "id": "Roastery hangat dengan panduan seduh interaktif.",
+      "en": "Warm roastery site with interactive brewing guides."
+    }
+  },
+  {
+    "name": {
+      "id": "Valence",
+      "en": "Valence"
+    },
+    "url": "https://coffx7.vercel.app/",
+    "tags": [
+      "Bold",
+      "Dark",
+      "Yellow"
+    ],
+    "desc": {
+      "id": "Identitas berani hitam dengan aksen kuning listrik.",
+      "en": "Bold black identity with electric-yellow accents."
+    }
+  },
+  {
+    "name": {
+      "id": "VØID Coffee Maison",
+      "en": "VØID Coffee Maison"
+    },
+    "url": "https://cofffx8.vercel.app/",
+    "tags": [
+      "Editorial",
+      "Luxury",
+      "Maison"
+    ],
+    "desc": {
+      "id": "Maison editorial kelas atas, nuansa high-fashion.",
+      "en": "High-fashion editorial maison with pure-extraction flair."
+    }
+  },
+  {
+    "name": {
+      "id": "Kyber",
+      "en": "Kyber"
+    },
+    "url": "https://cofffx9.vercel.app/",
+    "tags": [
+      "Futuristik",
+      "Dark",
+      "Electric Blue"
+    ],
+    "desc": {
+      "id": "Tampilan futuristik hitam dengan aksen biru listrik.",
+      "en": "Futuristic black look with electric-blue accents."
+    }
+  },
+  {
+    "name": {
+      "id": "Atelier VØID",
+      "en": "Atelier VØID"
+    },
+    "url": "https://cofffx10.vercel.app/",
+    "tags": [
+      "Editorial",
+      "Monokrom",
+      "Minimalis"
+    ],
+    "desc": {
+      "id": "Estetika editorial hitam-putih yang bersih.",
+      "en": "Clean black-and-white editorial aesthetic."
+    }
+  }
+]
